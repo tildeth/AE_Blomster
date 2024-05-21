@@ -4,5 +4,62 @@ import "../style/style.css";
 <section>
 <img src="../img/hortensia.jpeg" alt="hortensia">
 <h1>Anna Elisabeth</h1>
-<h3>SINCE 2022</h3>
+<h3>~ since 2022 ~</h3>
+<div>
+<nav class="nav-container">
+    <ol>
+        <li><a href="#">Forside</a></li>
+        <li><a href="#">Udvalg</a></li>
+        <li><a href="#">Om os</a></li>
+        <li><a href="#">Konto</a></li>
+        <li><a href="#">Kurv</a></li>
+</ol>
+</nav>
+</div>
 </section>
+
+<style>
+    img{
+        width: 100%;
+        height: 400px;
+        z-index: 1;
+        opacity: 0.4;
+    }
+    .nav-container, h1, h3 {
+        position: absolute;
+        z-index: 2;
+    }
+
+    h1{
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    h3{
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .nav-container{
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.7;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    
+    ol{
+        list-style: none;
+        z-index: 2;
+        background-color: var(--white);
+        display: flex;
+            gap: 20px;
+            padding: 20px;
+            margin: 0;
+    }
+    a{
+        text-decoration: none;
+        color: var(--brown);
+    }
+</style>
