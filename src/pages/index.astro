@@ -1,8 +1,8 @@
 ---
 import "../style/style.css";
+import header_card from "../components/header_card.astro"
 import footer from "../components/footer.astro";
 import banner from "../components/banner.astro";
-import header from "../components/header.astro";
 import productCard from "../components/productCard.astro";
 import tips from "../components/tips.astro";
 ---
@@ -23,6 +23,9 @@ import tips from "../components/tips.astro";
 		<title>Astro</title>
 	</head>
 	<body>
+		<header>
+<header_card/>
+		</header>
 		<h1>Anna Elisabeth</h1>
 		<p>Font test</p>
 	</body>
