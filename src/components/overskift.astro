@@ -1,0 +1,21 @@
+---
+const { text } = Astro.props;
+---
+
+<div class="header">
+  <img src="../img/streg.webp" alt="" />
+  <h2>{text}</h2>
+  <img src="../img/streg.webp" alt="" />
+</div>
+
+<style>
+  img {
+    width: 42%;
+    margin: 20px;
+  }
+
+  .header {
+    display: flex; /* Brug flex layout */
+    align-items: center; /* Centrer indhold lodret */
+  } */
+</style>
