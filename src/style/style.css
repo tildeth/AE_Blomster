@@ -31,3 +31,12 @@ body{
     font-family: "Yaldevi", sans-serif;
     color: var(--brown);
   }
+
+  .extra_t{
+    font-family: "Yaldevi", sans-serif;
+    color: var(--green);
+
+    a{
+      color: var(--pink);
+    }
+  }
