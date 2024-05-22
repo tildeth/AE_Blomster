@@ -1,7 +1,7 @@
 ---
 import "../style/style.css";
 import footer from "../components/footer.astro";
-import banner from "../components/banner.astro";
+import Banner from "../components/banner.astro";
 import header from "../components/header.astro";
 import productCard from "../components/productCard.astro";
 import tips from "../components/tips.astro";
@@ -26,9 +26,13 @@ import Overskift from "../components/overskift.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
+  <header>
+    <Banner />
+  </header>
   <body>
     <h1>Anna Elisabeth</h1>
     <p>Font test</p>
     <Overskift text="Inspiration" />
   </body>
+
 </html>
