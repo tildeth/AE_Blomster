@@ -27,6 +27,11 @@ body{
     font-size: xx-large;
   }
 
+  h3{
+    font-family: "hwt-arabesque";
+    color: var(--brown);
+  }
+
   p{
     font-family: "Yaldevi", sans-serif;
     color: var(--brown);
