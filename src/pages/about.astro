@@ -1,5 +1,12 @@
 ---
 import "../style/style.css";
+import Header_card from "../components/header_card.astro";
+import Footer from "../components/footer.astro";
+import Banner from "../components/banner.astro";
+import Overskift from "../components/overskift.astro";
+import ProductCard from "../components/productCard.astro";
+import Tips from "../components/tips.astro";
+import Inspi_card from "../components/inspi_card.astro";
 ---
   <head>
     <meta charset="utf-8"/>
@@ -19,6 +26,138 @@ import "../style/style.css";
     <title>Astro</title>
   </head>
   <body>
-    <h1>test</h1>
+    <Banner></Banner>
+    <section class="overskrift">
+    <h1>Om os</h1>
+    <img src="/img/streg_4.png" alt="">
+  </section>
+  
+  <section class="first">
+    <img src="/img/IMG_3606 - Kopi.avif" alt="">
+    <p>Anna Elisabeth Blomster er stiftet af Rafi i 2021 og er opkaldt efter sin datter. Anna Elisabeth Blomster ApS er en blomsterbutik med passion for at levere smukke og unikke blomsterarrangementer til kunderne.
+      <br>
+      <br>
+      Butikken ligger i hjertet af Egedal lige ved Egedal St. i De Grønne Porte. Som kunde kan man vælge mellem et udvalg af friske og farverige blomster og planter. Hos Anna Elisabeth Blomster leverer de blomster af høj kvalitet og fremragende kundeservice - og så kan de hjælpe med at skabe det perfekte look og stemning.
+      </p>
+  </section>
+
+  <section class="secound">
+    <img src="/img/ae_img.webp" alt="">
+  </section>
+
+  <section class="third">
+    <h4 class="om_os">Se vores butik her</h4>
+    <video src="https://studio.youtube.com/video/M8vkmsgGdm0/copyright" controls></video>
+    
+  </section>
+<Footer></Footer>
   </body>
   
+  <style>
+
+.overskrift {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.overskrift h1 {
+    font-size: 40px; 
+    margin: 40px; 
+}
+
+.overskrift img {
+    height: 24px;
+    width: 100%;
+    margin: 20px;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 80px; 
+    padding: 20px;
+    margin-top: 3%;
+}
+
+.first img {
+    max-width: 800px; 
+    height:700px;
+}
+
+.first p {
+    max-width: 35%; 
+    line-height: 2.5;
+}
+
+.secound {
+  margin-top: 3%;
+  display: flex;
+    justify-content: center; 
+}
+
+.secound img {
+  width: 35%;
+  border-radius: 50%;
+  height: auto; 
+    object-fit: cover; 
+    object-position: center;
+}
+
+.third {
+  margin-top: 5%;
+  font-size: 25px;
+    text-align: center; 
+    color: var(--green);
+    margin-top: 150px;
+}
+
+.third video {
+    width: 90%;
+    height: auto; 
+    padding: 40px;
+}
+
+
+@media screen and (max-width: 900px) {
+
+  .overskrift {
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px;
+}
+
+.overskrift img {
+    margin-top: 20px; 
+}
+
+.first {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+    margin: 20px;
+}
+
+.first p{
+  text-align: left;
+    max-width: 600px; 
+    margin-top: 10px; 
+    max-width: 100%; 
+}
+
+.first img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.secound img {
+  width: 75%;
+}
+
+}
+
+  </style>
