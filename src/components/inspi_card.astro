@@ -1,7 +1,17 @@
 ---
-
+import "../style/style.css";
+const insp_pic = Astro.props.inspi_pic;
+const { text } = Astro.props;
 ---
 
-<div>
-  <img src="" alt="" />
-</div>
+<article>
+  <img src={insp_pic} />
+  <p>{text}</p>
+</article>
+
+<style>
+  img {
+    width: 350px;
+    height: auto;
+  }
+</style>
