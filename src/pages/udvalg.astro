@@ -1,10 +1,12 @@
 ---
 import "../style/style.css";
 import Header_card from "../components/header_card.astro";
-import Footer from "../components/Footer.astro";
+import Footer from "../components/footer.astro";
 import Banner from "../components/banner.astro";
 import Overskift from "../components/overskift.astro";
-import ProductCard from "../components/ProductCard.astro";
+import ProductCard from "../components/productCard.astro";
+import TilbageKnap from "../components/tilbage_knap.astro";
+import Kurv from "../components/kurv.astro";
 
 const data = await fetch(
     "https://dmmsxgbleguwsrjxcdfh.supabase.co/rest/v1/ae_blomster",
@@ -22,6 +24,14 @@ const data = await fetch(
 ---
 
 <main>
+  <Banner></Banner>
+  <TilbageKnap></TilbageKnap>
+  <section class="overskrift">
+    <h1>Om os</h1>
+    <img src="/img/stregen2.webp" alt="">
+  </section>
+
+
 <section class="udvalg_grid">
   {data.map(blomst=>{
     return <ProductCard data={blomst} />
@@ -33,10 +43,43 @@ const data = await fetch(
 
 
 <style>
+
+.overskrift {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.overskrift h1 {
+    font-size: 40px; 
+    margin: 40px; 
+}
+
+.overskrift img {
+    height: 24px;
+    width: 100%;
+    margin: 20px;
+}
+
   .udvalg_grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 5%;
     gap: 5%;
+  }
+
+  @media screen and (max-width: 900px) {
+
+.overskrift {
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 20px;
+}
+
+.overskrift img {
+  margin-top: 20px; 
+}
   }
 </style>
