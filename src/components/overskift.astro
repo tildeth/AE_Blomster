@@ -4,7 +4,7 @@ const { text } = Astro.props;
 
 <div class="header">
   <h2>{text}</h2>
-  <img src="../img/stregen2.webp" alt="" />
+  <img src="../img/streg.svg" alt="" />
 </div>
 
 <style>
@@ -15,30 +15,14 @@ const { text } = Astro.props;
 
   .header h2 {
     margin: 20px; /* Fjern standard margin */
-    flex-shrink: 0; /* Forhindre h2 i at ændre størrelse */
   }
 
   .header img {
-    width: 70%; /* Automatisk bredde */ /* Fast højde, juster som nødvendigt */
+    width: 70%; /* Automatisk bredde */
+    height: 30px; /* Fast højde, juster som nødvendigt */
     flex-grow: 1; /* Tillad billedet at fylde den resterende bredde */
-    margin: 20px; /* Afstand mellem billede og tekst */
+    margin-left: 20px; /* Afstand mellem billede og tekst */
+    margin-right: 20%;
     object-fit: cover; /* Sikrer at billedet bevarer sit forhold */
-    padding-right: 20%;
-  }
-
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column; /* Stak elementerne lodret */
-      align-items: center; /* Juster elementerne til venstre */
-    }
-
-    img {
-      object-fit: cover;
-      padding-left: 20%;
-    }
-
-    h2 {
-      font-size: large;
-    }
   }
 </style>
