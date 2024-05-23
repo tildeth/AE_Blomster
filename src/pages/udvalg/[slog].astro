@@ -1,0 +1,73 @@
+---
+import "../../style/style.css";
+
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://dmmsxgbleguwsrjxcdfh.supabase.co/rest/v1/ae_blomster",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRtbXN4Z2JsZWd1d3NyanhjZGZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMjU0NjMsImV4cCI6MjAzMDkwMTQ2M30.EUV_DuoCBgYOjjmQ10T54Q80kiR6_fejdBF3RdWfbv8",
+      },
+    }
+  ).then((response) => response.json());
+
+  return data.map((single) => {
+    return {
+      params: { slog: single.slog },
+      props: { single },
+    };
+  });
+}
+
+const { single } = Astro.props;
+
+
+
+---
+
+
+<article class="singleview">
+  <img src={single.billede} alt="billede"/>
+<div class="textbox_single">
+  <h3>{single.produktnavn}</h3>  
+  <div class="textbox2">
+      <p class="bold">Pris</p>
+      <p class="bold">Farver</p>
+      <p>{single.pris}</p>
+      <p>{single.farver}</p>
+  </div>
+  <p class="bold">Beskrivelse</p>
+  <p>{single.beskrivelse}</p>
+</div>
+</article>
+
+<style>
+
+img {
+display: block;
+width: 100%;
+height: auto;
+}
+
+.bold {
+font-weight: bold;
+}
+
+.singleview{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 5%;
+  gap: 5%;
+}
+.textbox2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+.textbox_single{
+
+}
+</style>
+
