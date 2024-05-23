@@ -1,51 +1,52 @@
 :root {
-    --sand: #FBF7EB;
-    --green: #9BB17D;
-    --pink: #D7709D;
-    --brown: #342015;
-    --white: #F1F1F3;
-  }
-
-  @font-face {
-    font-family:"hwt-arabesque", sans-serif ;
-    font-weight: 400;
-  font-style: normal;
-    src: url();
-  }
-
-body{
-    background-color: var(--sand);
+  --sand: #fbf7eb;
+  --green: #9bb17d;
+  --pink: #d7709d;
+  --brown: #342015;
+  --white: #f1f1f3;
+  --drak_green: #486d0f;
 }
 
-  h1{
-    font-family: "hwt-arabesque";
-    color: var(--brown);
-    font-size: 150px;
-  }
-  h2{
-    font-family: "hwt-arabesque";
-    color: var(--pink);
-    font-size: xx-large;
-    margin-left: 20px;
-  }
+@font-face {
+  font-family: "hwt-arabesque", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url();
+}
 
-  h3{
-    font-family: "Yaldevi", sans-serif;
-    color: var(--brown);
-    font-size: 50px;
-    font-weight: 200;
-  }
+body {
+  background-color: var(--sand);
+}
 
-  p{
-    font-family: "Yaldevi", sans-serif;
-    color: var(--brown);
-  }
+h1 {
+  font-family: "hwt-arabesque";
+  color: var(--brown);
+  font-size: 150px;
+}
+h2 {
+  font-family: "hwt-arabesque";
+  color: var(--pink);
+  font-size: xx-large;
+  margin-left: 20px;
+}
 
-  .extra_t{
-    font-family: "Yaldevi", sans-serif;
-    color: var(--green);
+h3 {
+  font-family: "Yaldevi", sans-serif;
+  color: var(--brown);
+  font-size: 50px;
+  font-weight: 200;
+}
+
+p {
+  font-family: "Yaldevi", sans-serif;
+  color: var(--brown);
+}
+
+.extra_t {
+  font-family: "Yaldevi", sans-serif;
+  color: var(--green);
 
   /*   a{
       color: var(--pink);
     } */
-  }
+}
