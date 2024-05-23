@@ -20,6 +20,7 @@ body{
   h1{
     font-family: "hwt-arabesque";
     color: var(--brown);
+    font-size: 150px;
   }
   h2{
     font-family: "hwt-arabesque";
@@ -29,8 +30,10 @@ body{
   }
 
   h3{
-    font-family: "hwt-arabesque";
+    font-family: "Yaldevi", sans-serif;
     color: var(--brown);
+    font-size: 50px;
+    font-weight: 200;
   }
 
   p{

@@ -1,8 +1,109 @@
----
+
 import "../style/style.css";
 ---
 <section>
 <img src="../img/hortensia.jpeg" alt="hortensia">
 <h1>Anna Elisabeth</h1>
-<h3>SINCE 2022</h3>
+<h3>~ since 2022 ~</h3>
+<nav class="nav-container">
+    <ol>
+        <li><a href="#">Forside</a></li>
+        <li><a href="#">Udvalg</a></li>
+        <li><a href="#">Om os</a></li>
+    </ol>
+    <ul>
+        <div>
+        <img src="../img/Person.jpg" alt="person ikon">
+        <li><a href="#">Konto</a></li>
+    </div>
+    <div>
+        <img src="../img/Shopping Cart.jpg" alt="shopping cart ikon">
+        <li><a href="#">Kurv</a></li>
+    </div>
+    </ul>
+</nav>
 </section>
+
+<style>
+
+    section{
+        position: relative;
+    }
+    img{
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: 1;
+        opacity: 0.4;
+    }
+
+    ul img{
+        width: 50px;
+        height: 50px;
+        z-index: 2;
+        list-style: none;
+
+    }
+
+    ul {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+    ul div {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 0;
+            padding: 10px;
+        }
+    .nav-container, h1, h3 {
+        position: absolute;
+        z-index: 2;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        opacity: 0.7;
+        background-color: var(--white);
+        border-radius: 15px;
+        align-items: center;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    h1{
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    h3{
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .nav-container{
+        top: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+    
+    ol{
+        list-style: none;
+        z-index: 2;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        margin: 0;
+    }
+    a{
+        text-decoration: none;
+        color: var(--brown);
+        font-size: 40px;
+    }
+</style>
