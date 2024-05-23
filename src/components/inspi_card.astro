@@ -1,7 +1,16 @@
 ---
-
+const ipic = Astro.props;
+const { text } = Astro.props;
 ---
 
 <div>
-  <img src="" alt="" />
+  <img src={ipic} />
+  <p>{text}</p>
 </div>
+
+<style>
+  img {
+    width: 350px;
+    height: auto;
+  }
+</style>
