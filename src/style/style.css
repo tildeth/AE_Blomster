@@ -25,6 +25,7 @@ body{
     font-family: "hwt-arabesque";
     color: var(--pink);
     font-size: xx-large;
+    margin-left: 20px;
   }
 
   h3{
