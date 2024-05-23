@@ -18,20 +18,19 @@ import Inspi_card from "../components/inspi_card.astro";
      <!-- google font skal convertes til woff2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-
+	<link rel="stylesheet" href="../src/layout/layout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200..700&display=swap" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <header>
-    <Banner />
-	<Header_card/>
-  </header>
+  
   <body>
+	<header>
+		<Banner />
+		<Header_card/>
+	  </header>
+	  <main>
     <Overskift text="Inspiration" />
     <p class="extra_t">
       Vil du lærer at binde en buket, lave blomsterkranse mm. så se vores
@@ -44,6 +43,8 @@ import Inspi_card from "../components/inspi_card.astro";
     <Overskift text="Tips" />
 
     <p class="extra_t">Hold musen over billedet for fun-fact:</p>
+	<section class="grid_1-1">
+		<div>
     <Tips
       header="Blomster i isterninger:"
       text="At tørre blomster er en enkel proces, der bevarer deres skønhed i lang tid. Start med at vælge friske blomster med stærke stængler. Bind dem sammen i små bundter og hæng dem op ned et varmt og tørt sted, gerne med god luftcirkulation. Efter et par uger vil blomsterne være tørre og klar til brug. Du kan bruge dem til dekoration, potpourri eller endda i badebomber for at tilføje en smuk og naturlig duftoplevelse."
@@ -59,7 +60,8 @@ import Inspi_card from "../components/inspi_card.astro";
       alt="Eukalyptus i badet"
       fact1="Eualytups er så gode til at bevare balance, at de kunne gå på en stram line og jonglere med frugt, mens de resiterer pi til hundrede decimaler – alt imens de jonglerer med flere forskellige bolde! Okay, det er måske en lille smule overdrevet, men de er virkelig gode til at balancere, især når de er i flok."
       fact2="Køb friske eukalyptusgrene. Kan fås her"
-    />
+    /></div>
+	<div>
     <Tips
       header="Lær at tørre dine blomster:"
       text="At tørre blomster er en enkel proces, der bevarer deres skønhed i lang tid. Start med at vælge friske blomster med stærke stængler. Bind dem sammen i små bundter og hæng dem op ned et varmt og tørt sted, gerne med god luftcirkulation. Efter et par uger vil blomsterne være tørre og klar til brug. Du kan bruge dem til dekoration, potpourri eller endda i badebomber for at tilføje en smuk og naturlig duftoplevelse."
@@ -75,9 +77,11 @@ import Inspi_card from "../components/inspi_card.astro";
       alt="Blomsterkrans"
       fact1="For at forlænge holdbarheden af friske blomster - de elsker sødt! Derfor kan du tilføje sukker til vandet for at give blomsterne en energikilde eller tilføje lidt eddike for at hæmme bakterievækst. En anden måde er at skære stænglerne under vand for at forhindre luft i at komme ind i stænglerne, hvilket kan blokere vandoptagelsen. I gamle dage lagde man en kobbermønt i, og mente at det forlængende blomsternes levetid."
       fact2="For en blomsterkrans, brug friske blomster som roser, lavendel, tusindfryd, og eukalyptus"
-    />
-
-<main/>
-    <footer/>
+    /></div>
+</section>
+</main>
+    <footer>
+		<Footer/>
+	</footer>
 </body>
 
