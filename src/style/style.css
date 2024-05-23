@@ -50,3 +50,25 @@ p {
       color: var(--pink);
     } */
 }
+
+h4 {
+  font-family: "Yaldevi", sans-serif;
+  color: var(--brown);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Yaldevi", sans-serif;
+  color: var(--brown);
+  max-width: 50ch;
+}
+
+.extra_t {
+  font-family: "Yaldevi", sans-serif;
+  color: var(--green);
+}
+
+text {
+  max-width: 45ch;
+}

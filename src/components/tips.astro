@@ -17,14 +17,17 @@ const fact2 = Astro.props.fact2;
         <p>{fact2}</p>
     </div>
     </div>
-    <h3>{header}</h3>
+    <h4>{header}</h4>
     <p>{text}</p>
 </article>
 
 <style>
+
+  
     img{
-        width: 350px;
-        height: auto;
+        width: 450px;
+        height: 450px;
+
     }
 
     .t_card{
@@ -48,11 +51,12 @@ margin: 2%;
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
-    font-size: 11px;
+    font-size: 15px;
+
   }
 
   .overlay h6{
-    font-size: 20px;
+    font-size: 22px;
     font-family:"hwt-arabesque", sans-serif ;
   }
 
@@ -61,8 +65,8 @@ margin: 2%;
   }
 
   .t_cardbox {
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: auto;
     overflow: hidden;
 
     position: relative;
