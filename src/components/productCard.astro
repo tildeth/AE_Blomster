@@ -1,15 +1,20 @@
 ---
 import "../style/style.css";
 
----
+const {data} = Astro.props;
 
-    <div class="polaroid">
-        <img src= alt=/>
+---
+<a href={`/udvalg/${data.slog}`}>
+    <article class="polaroid">
+<div class="pcard_box">
+        <img src={data.billede} alt="billede"/>
+</div>
         <div class="product">
-            <p></p>
-            <p class="bold"></p>
+          <p class="bold">{data.produktnavn}</p>
+          <p>{data.pris}</p>
         </div>
-    </div>
+    </article>
+  </a>
 
   <style>
 .polaroid {
@@ -27,8 +32,20 @@ import "../style/style.css";
     height: auto;
   }
 
+  .pcard_box{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+
   .bold {
     font-weight: bold;
+  }
+
+  .product{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   </style>
   
