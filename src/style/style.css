@@ -30,10 +30,13 @@ body{
   h3{
     font-family: "Yaldevi", sans-serif;
     color: var(--brown);
-    font-size: 60px;
+    font-size: 50px;
+    font-weight: 200;
   }
 
   p{
     font-family: "Yaldevi", sans-serif;
     color: var(--brown);
   }
+
+

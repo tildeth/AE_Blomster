@@ -1,21 +1,27 @@
----
+
 import "../style/style.css";
 ---
 <section>
 <img src="../img/hortensia.jpeg" alt="hortensia">
 <h1>Anna Elisabeth</h1>
 <h3>~ since 2022 ~</h3>
-<div>
 <nav class="nav-container">
     <ol>
         <li><a href="#">Forside</a></li>
         <li><a href="#">Udvalg</a></li>
         <li><a href="#">Om os</a></li>
+    </ol>
+    <ul>
+        <div>
+        <img src="../img/Person.jpg" alt="person ikon">
         <li><a href="#">Konto</a></li>
+    </div>
+    <div>
+        <img src="../img/Shopping Cart.jpg" alt="shopping cart ikon">
         <li><a href="#">Kurv</a></li>
-</ol>
+    </div>
+    </ul>
 </nav>
-</div>
 </section>
 
 <style>
@@ -30,9 +36,43 @@ import "../style/style.css";
         z-index: 1;
         opacity: 0.4;
     }
+
+    ul img{
+        width: 50px;
+        height: 50px;
+        z-index: 2;
+        list-style: none;
+
+    }
+
+    ul {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+    ul div {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 0;
+            padding: 10px;
+        }
     .nav-container, h1, h3 {
         position: absolute;
         z-index: 2;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        opacity: 0.7;
+        background-color: var(--white);
+        border-radius: 15px;
+        align-items: center;
+    }
+
+    li{
+        list-style: none;
     }
 
     h1{
@@ -50,22 +90,20 @@ import "../style/style.css";
         top: 85%;
         left: 50%;
         transform: translateX(-50%);
-        opacity: 0.7;
-        border-radius: 15px;
         overflow: hidden;
     }
     
     ol{
         list-style: none;
         z-index: 2;
-        background-color: var(--white);
         display: flex;
-            gap: 20px;
-            padding: 20px;
-            margin: 0;
+        gap: 20px;
+        padding: 20px;
+        margin: 0;
     }
     a{
         text-decoration: none;
         color: var(--brown);
+        font-size: 40px;
     }
 </style>
