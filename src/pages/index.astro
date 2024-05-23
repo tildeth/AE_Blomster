@@ -10,60 +10,73 @@ import Tips from "../components/tips.astro";
 import Inspi_card from "../components/inspi_card.astro";
 import InspiCard from "../components/inspi_card.astro";
 ---
+     <!-- google font skal convertes til woff2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="../src/layout/layout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200..700&display=swap" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  
+  <body>
+	<header>
+		<Banner />
+		<Header_card/>
+	  </header>
+	  <main>
+    <Overskift text="Inspiration" />
+    <p class="extra_t">
+      Vil du lærer at binde en buket, lave blomsterkranse mm. så se vores
+      arrangementer <a href="">her</a>
+    </p>
 
-<Banner />
-<Header_card />
+    <p class="extra_t">
+      Find mere af vores udvalg <a href="">her</a>
+    </p>
+    <Overskift text="Tips" />
 
-<Overskift text="Inspiration" />
-<p class="extra_t">
-  Vil du lærer at binde en buket, lave blomsterkranse mm. så se vores
-  arrangementer <a href="">her</a>
-</p>
-<InspiCard text="Hej med jer" ipic="../img/b4.h" />
-<p class="extra_t">
-  Find mere af vores udvalg <a href="">her</a>
-</p>
-<Overskift text="Tips" />
-
-<p class="extra_t">Hold musen over billedet for fun-fact:</p>
-<Tips
-  header="Blomster i isterninger:"
-  text="At tørre blomster er en enkel proces, der bevarer deres skønhed i lang tid. Start med at vælge friske blomster med stærke stængler. Bind dem sammen i små bundter og hæng dem op ned et varmt og tørt sted, gerne med god luftcirkulation. Efter et par uger vil blomsterne være tørre og klar til brug. Du kan bruge dem til dekoration, potpourri eller endda i badebomber for at tilføje en smuk og naturlig duftoplevelse."
-  tpic="../../img/istern.avif"
-  alt="Isterninger med blosmter"
-  fact1="Vidste du, at roser faktisk er spiselige? Mange tror, at roser kun er til pynt, men faktisk kan næsten alle roser spises, dog med varierende smag alt efter sorten. De har en fin og delikat smag, der kan bruges til at give en subtil rosearoma til mad og drikke. Det er en helt ny måde at nyde disse smukke blomster på!"
-  fact2="For festlige blomsteristerninger, brug spiselige blomster som violer, lavendel, kamille, rosenblade, nelliker, borago eller morgenfruer."
-/>
-<Tips
-  header="Eukalytus i badet:"
-  text="At tilføje eukalyptus i dine badebomber er en dejlig måde at skabe en forfriskende og beroligende spa-lignende oplevelse derhjemme. Du kan lægge et par eukalyptusblade i bunden af din badebombeform, hæld forsigtigt din blanding ovenpå og lad det størkne. Når du tager et bad med disse badebomber, vil dampen frigive den behagelige aroma af eukalyptus, der hjælper med at lindre stress og berolige sindet."
-  tpic="../../img/e_lyptus.avif"
-  alt="Eukalyptus i badet"
-  fact1="Eualytups er så gode til at bevare balance, at de kunne gå på en stram line og jonglere med frugt, mens de resiterer pi til hundrede decimaler – alt imens de jonglerer med flere forskellige bolde! Okay, det er måske en lille smule overdrevet, men de er virkelig gode til at balancere, især når de er i flok."
-  fact2="Køb friske eukalyptusgrene. Kan fås her"
-/>
-<Tips
-  header="Lær at tørre dine blomster:"
-  text="At tørre blomster er en enkel proces, der bevarer deres skønhed i lang tid. Start med at vælge friske blomster med stærke stængler. Bind dem sammen i små bundter og hæng dem op ned et varmt og tørt sted, gerne med god luftcirkulation. Efter et par uger vil blomsterne være tørre og klar til brug. Du kan bruge dem til dekoration, potpourri eller endda i badebomber for at tilføje en smuk og naturlig duftoplevelse."
-  tpic="../../img/tbuket.avif"
-  alt="Tørret blomster"
-  fact1="Tørrede blomster har været brugt i årtusinder til både medicinske og dekorative formål. I oldtiden brugte forskellige kulturer tørrede blomster til at lave urtemedicin og te, da de troede på deres helbredende egenskaber. Disse blomster blev også brugt til at lave duftende poser, der blev lagt i skabe eller sengelinned for at holde dem friske og duftende. Så tørrede blomster har en lang historie med at være både nyttige og smukke!"
-  fact2="Vælg friske blomster som roser, lavendel, gypsophila, og statice."
-/>
- <Tips header="Lær at binde din egen blomsterkrans:" text="At lave
-blomsterkranse er en sjov og kreativ aktivitet, der tilføjer et strejf af natur
-til ethvert outfit. Start med at vælge friske blomster med stærke stængler og
-bøjelige grene. Bind derefter blomsterne sammen i små bundter med blomstertråd
-eller snor. Form disse bundter til en cirkel og bind enderne sammen. Du kan også
-tilføje grønne blade eller andre dekorative elementer efter ønske. Når kranse er
-færdige, har du en smuk og naturlig accessorie, perfekt til sommerfestivaler,
-bryllupper eller en tur i parken." tpic="../../img/krans.avif"
-alt="Blomsterkrans" fact1="For at forlænge holdbarheden af friske blomster - de
-elsker sødt! Derfor kan du tilføje sukker til vandet for at give blomsterne en
-energikilde eller tilføje lidt eddike for at hæmme bakterievækst. En anden måde
-er at skære stænglerne under vand for at forhindre luft i at komme ind i
-stænglerne, hvilket kan blokere vandoptagelsen. I gamle dage lagde man en
-kobbermønt i, og mente at det forlængende blomsternes levetid." fact2="For en
-blomsterkrans, brug friske blomster som roser, lavendel, tusindfryd, og
-eukalyptus"
+    <p class="extra_t">Hold musen over billedet for fun-fact:</p>
+	<section class="grid_1-1">
+		<div>
+    <Tips
+      header="Blomster i isterninger:"
+      text="At tørre blomster er en enkel proces, der bevarer deres skønhed i lang tid. Start med at vælge friske blomster med stærke stængler. Bind dem sammen i små bundter og hæng dem op ned et varmt og tørt sted, gerne med god luftcirkulation. Efter et par uger vil blomsterne være tørre og klar til brug. Du kan bruge dem til dekoration, potpourri eller endda i badebomber for at tilføje en smuk og naturlig duftoplevelse."
+      tpic="../../img/istern.avif"
+      alt="Isterninger med blosmter"
+      fact1="Vidste du, at roser faktisk er spiselige? Mange tror, at roser kun er til pynt, men faktisk kan næsten alle roser spises, dog med varierende smag alt efter sorten. De har en fin og delikat smag, der kan bruges til at give en subtil rosearoma til mad og drikke. Det er en helt ny måde at nyde disse smukke blomster på!"
+      fact2="For festlige blomsteristerninger, brug spiselige blomster som violer, lavendel, kamille, rosenblade, nelliker, borago eller morgenfruer."
+    />
+    <Tips
+      header="Eukalytus i badet:"
+      text="At tilføje eukalyptus i dine badebomber er en dejlig måde at skabe en forfriskende og beroligende spa-lignende oplevelse derhjemme. Du kan lægge et par eukalyptusblade i bunden af din badebombeform, hæld forsigtigt din blanding ovenpå og lad det størkne. Når du tager et bad med disse badebomber, vil dampen frigive den behagelige aroma af eukalyptus, der hjælper med at lindre stress og berolige sindet."
+      tpic="../../img/e_lyptus.avif"
+      alt="Eukalyptus i badet"
+      fact1="Eualytups er så gode til at bevare balance, at de kunne gå på en stram line og jonglere med frugt, mens de resiterer pi til hundrede decimaler – alt imens de jonglerer med flere forskellige bolde! Okay, det er måske en lille smule overdrevet, men de er virkelig gode til at balancere, især når de er i flok."
+      fact2="Køb friske eukalyptusgrene. Kan fås her"
+    /></div>
+	<div>
+    <Tips
+      header="Lær at tørre dine blomster:"
+      text="At tørre blomster er en enkel proces, der bevarer deres skønhed i lang tid. Start med at vælge friske blomster med stærke stængler. Bind dem sammen i små bundter og hæng dem op ned et varmt og tørt sted, gerne med god luftcirkulation. Efter et par uger vil blomsterne være tørre og klar til brug. Du kan bruge dem til dekoration, potpourri eller endda i badebomber for at tilføje en smuk og naturlig duftoplevelse."
+      tpic="../../img/tbuket.avif"
+      alt="Tørret blomster"
+      fact1="Tørrede blomster har været brugt i årtusinder til både medicinske og dekorative formål. I oldtiden brugte forskellige kulturer tørrede blomster til at lave urtemedicin og te, da de troede på deres helbredende egenskaber. Disse blomster blev også brugt til at lave duftende poser, der blev lagt i skabe eller sengelinned for at holde dem friske og duftende. Så tørrede blomster har en lang historie med at være både nyttige og smukke!"
+      fact2="Vælg friske blomster som roser, lavendel, gypsophila, og statice."
+    />
+    <Tips
+      header="Lær at binde din egen blomsterkrans:"
+      text="At lave blomsterkranse er en sjov og kreativ aktivitet, der tilføjer et strejf af natur til ethvert outfit. Start med at vælge friske blomster med stærke stængler og bøjelige grene. Bind derefter blomsterne sammen i små bundter med blomstertråd eller snor. Form disse bundter til en cirkel og bind enderne sammen. Du kan også tilføje grønne blade eller andre dekorative elementer efter ønske. Når kranse er færdige, har du en smuk og naturlig accessorie, perfekt til sommerfestivaler, bryllupper eller en tur i parken."
+      tpic="../../img/krans.avif"
+      alt="Blomsterkrans"
+      fact1="For at forlænge holdbarheden af friske blomster - de elsker sødt! Derfor kan du tilføje sukker til vandet for at give blomsterne en energikilde eller tilføje lidt eddike for at hæmme bakterievækst. En anden måde er at skære stænglerne under vand for at forhindre luft i at komme ind i stænglerne, hvilket kan blokere vandoptagelsen. I gamle dage lagde man en kobbermønt i, og mente at det forlængende blomsternes levetid."
+      fact2="For en blomsterkrans, brug friske blomster som roser, lavendel, tusindfryd, og eukalyptus"
+    /></div>
+</section>
+</main>
+    <footer>
+		<Footer/>
+	</footer>
+</body>
 

@@ -1,0 +1,12 @@
+@media screen and (min-width: 400px) {
+.grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+}
+
+main{
+    margin: 10%;
+    padding: 5%;
+}
