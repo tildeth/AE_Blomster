@@ -53,9 +53,8 @@ p {
   font-size: 15px;
   color: var(--drak_green);
   line-height: 2;
-  white-space: nowrap;
   margin-top: 20px;
-  margin-bottom: -50px;
+
 }
 
 .link {
@@ -101,6 +100,7 @@ text {
 
   .e1{
       margin-left: 20px;
+      padding-bottom: 15px;
     }
     .e3{
       margin-left: 150px;
