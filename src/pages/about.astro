@@ -9,157 +9,159 @@ import TilbageKnap from "../components/tilbage_knap.astro";
 import Kurv from "../components/kurv.astro";
 import Levering from "../components/levering.astro";
 ---
-  <head>
-    <meta charset="utf-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="https://use.typekit.net/heg3tgx.css" />
 
-     <!-- google font skal convertes til woff2 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="https://use.typekit.net/heg3tgx.css" />
 
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Banner></Banner>
-    <TilbageKnap></TilbageKnap>
-    <section class="overskrift">
-    <h1>Om os</h1>
-    <img src="/img/stregen2.webp" alt="">
-  </section>
-  
+  <!-- google font skal convertes til woff2 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200..700&display=swap"
+    rel="stylesheet"
+  />
+
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Astro</title>
+</head>
+<body>
+  <Banner />
+  <TilbageKnap />
+  <Overskift text="Om Os">
+    <img src="/img/stregen2.webp" alt="" />
+  </Overskift>
+
   <section class="first">
-    <img src="/img/IMG_3606 - Kopi.avif" alt="">
-    <p>Anna Elisabeth Blomster er stiftet af Rafi i 2021 og er opkaldt efter sin datter. Anna Elisabeth Blomster ApS er en blomsterbutik med passion for at levere smukke og unikke blomsterarrangementer til kunderne.
-      <br>
-      <br>
-      Butikken ligger i hjertet af Egedal lige ved Egedal St. i De Grønne Porte. Som kunde kan man vælge mellem et udvalg af friske og farverige blomster og planter. Hos Anna Elisabeth Blomster leverer de blomster af høj kvalitet og fremragende kundeservice - og så kan de hjælpe med at skabe det perfekte look og stemning.
-      </p>
+    <img src="/img/IMG_3606 - Kopi.avif" alt="" />
+    <p>
+      Anna Elisabeth Blomster er stiftet af Rafi i 2021 og er opkaldt efter sin
+      datter. Anna Elisabeth Blomster ApS er en blomsterbutik med passion for at
+      levere smukke og unikke blomsterarrangementer til kunderne.
+      <br />
+      <br />
+       Butikken ligger i hjertet af Egedal lige ved Egedal St. i De Grønne
+      Porte. Som kunde kan man vælge mellem et udvalg af friske og farverige
+      blomster og planter. Hos Anna Elisabeth Blomster leverer de blomster af
+      høj kvalitet og fremragende kundeservice - og så kan de hjælpe med at
+      skabe det perfekte look og stemning.
+    </p>
   </section>
 
   <section class="secound">
-    <img src="/img/ae_img.webp" alt="">
+    <img src="/img/ae_img.webp" alt="" />
   </section>
 
   <section class="third">
     <h4 class="om_os">Se vores butik her</h4>
-    <video src="https://studio.youtube.com/video/M8vkmsgGdm0/copyright" controls></video>
-    
+    <video src="https://studio.youtube.com/video/M8vkmsgGdm0/copyright" controls
+    ></video>
   </section>
-<Footer></Footer>
-  </body>
-  
-  <style>
+  <Footer />
+</body>
 
-.overskrift {
+<style>
+  .overskrift {
     display: flex;
     align-items: center;
     white-space: nowrap;
-}
+  }
 
-.overskrift h1 {
-    font-size: 40px; 
-    margin: 40px; 
-}
+  .overskrift h1 {
+    font-size: 40px;
+    margin: 40px;
+  }
 
-.overskrift img {
+  .overskrift img {
     height: 24px;
     width: 100%;
     margin: 20px;
-}
+  }
 
-.first {
+  .first {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    gap: 80px; 
+    align-items: center;
+    gap: 80px;
     padding: 20px;
     margin-top: 3%;
-}
+  }
 
-.first img {
-    max-width: 800px; 
-    height:700px;
-}
+  .first img {
+    max-width: 800px;
+    height: 700px;
+  }
 
-.first p {
-    max-width: 35%; 
+  .first p {
+    max-width: 35%;
     line-height: 2.5;
-}
+  }
 
-.secound {
-  margin-top: 3%;
-  display: flex;
-    justify-content: center; 
-}
+  .secound {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+  }
 
-.secound img {
-  width: 35%;
-  border-radius: 50%;
-  height: auto; 
-    object-fit: cover; 
+  .secound img {
+    width: 35%;
+    border-radius: 50%;
+    height: auto;
+    object-fit: cover;
     object-position: center;
-}
+  }
 
-.third {
-  margin-top: 5%;
-  font-size: 25px;
-    text-align: center; 
+  .third {
+    margin-top: 5%;
+    font-size: 25px;
+    text-align: center;
     color: var(--green);
     margin-top: 150px;
-}
+  }
 
-.third video {
+  .third video {
     width: 90%;
-    height: auto; 
-    padding: 40px;
-}
-
-
-@media screen and (max-width: 900px) {
-
-  .overskrift {
-    text-align: center; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    padding: 20px;
-}
-
-.overskrift img {
-    margin-top: 20px; 
-}
-
-.first {
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    flex-direction: column; 
-    margin: 20px;
-}
-
-.first p{
-  text-align: left;
-    max-width: 600px; 
-    margin-top: 10px; 
-    max-width: 100%; 
-}
-
-.first img {
-    max-width: 100%; 
     height: auto;
-}
+    padding: 40px;
+  }
 
-.secound img {
-  width: 75%;
-}
+  @media screen and (max-width: 900px) {
+    .overskrift {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-}
+    .overskrift img {
+      margin-top: 20px;
+    }
 
-  </style>
+    .first {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 20px;
+    }
+
+    .first p {
+      text-align: left;
+      max-width: 600px;
+      margin-top: 10px;
+      max-width: 100%;
+    }
+
+    .first img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .secound img {
+      width: 75%;
+    }
+  }
+</style>
