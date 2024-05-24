@@ -8,10 +8,6 @@
 }
 }
 
-grid_1-1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
 
 section{
     margin: 10%;
@@ -19,3 +15,13 @@ section{
 }
 
 /*  Media q!!!!!! */
+
+@media screen and (max-width: 700px) {
+
+    .grid_1-1{
+        display: block;
+    }
+    .e1{
+        margin-left: 0px;
+      }
+}

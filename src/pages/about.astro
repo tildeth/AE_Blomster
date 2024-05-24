@@ -12,6 +12,7 @@ import Levering from "../components/levering.astro";
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="https://use.typekit.net/heg3tgx.css" />
   <link rel="icon" href="svg/logo.svg" />
@@ -37,11 +38,12 @@ import Levering from "../components/levering.astro";
 
   <section class="first">
     <img src="/img/IMG_3606 - Kopi.avif" alt="" />
+    <div>
+    <h1>Det som du skal vide om os</h1>
     <p>
       Anna Elisabeth Blomster er stiftet af Rafi i 2021 og er opkaldt efter sin
       datter. Anna Elisabeth Blomster ApS er en blomsterbutik med passion for at
       levere smukke og unikke blomsterarrangementer til kunderne.
-      <br />
       <br />
        Butikken ligger i hjertet af Egedal lige ved Egedal St. i De Grønne
       Porte. Som kunde kan man vælge mellem et udvalg af friske og farverige
@@ -49,10 +51,31 @@ import Levering from "../components/levering.astro";
       høj kvalitet og fremragende kundeservice - og så kan de hjælpe med at
       skabe det perfekte look og stemning.
     </p>
+  </div>
   </section>
 
   <section class="secound">
-    <img src="/img/ae_img.webp" alt="" />
+    <div class="opening-hours">
+<ul>
+  <h4>Åbningstider</h4>
+  <li>Mandag 10.00-18:00</li>
+<li>Tirsdag 10.00-18.00</li>
+<li>Onsdag 10.00-18.00</li>
+<li>Torsdag 10.00-18.00</li>
+<li>Fredag 10.00-18.00</li>
+<li>Lørdag 10.00-16.00</li>
+<li>Søndag 10.00-15.00</li>
+</ul>
+    </div>
+
+    <div class="ae">
+      <ul>
+        <h4 class="fo">Find os</h4>
+        <li>Dronning Dagmarsvej 244, 3650 Ølstykke</li>
+        <li>Mobil: +45 47 47 79</li>
+        <li>E-mail: Info@Aeblomster.dk</li>
+      </ul>
+    </div>
   </section>
 
   <section class="third">
@@ -64,54 +87,58 @@ import Levering from "../components/levering.astro";
 </body>
 
 <style>
-  .overskrift {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-  }
-
-  .overskrift h1 {
-    font-size: 40px;
-    margin: 40px;
-  }
-
-  .overskrift img {
-    height: 24px;
-    width: 100%;
-    margin: 20px;
-  }
 
   .first {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    padding: 20px;
-    margin-top: 3%;
+display: flex;
+justify-content: center;
+align-items: center;
+    gap: 50px;
+    padding: 10px;
+    margin-top: 5%;
+  }
+
+  .first h1 {
+    font-size: 35px;
+    margin-bottom: 60px;
   }
 
   .first img {
+    margin-left: 200px;
+    width: 100%;
     max-width: 800px;
-    height: 700px;
+
   }
 
   .first p {
-    max-width: 35%;
-    line-height: 2.5;
+    max-width: 75%;
+    line-height: 2.3;
+  }
+
+  br {
+    margin-bottom: 30px;
   }
 
   .secound {
-    margin-top: 3%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
     justify-content: center;
+    gap: 10px;
+    margin-top: 3%;
+    margin-left: 210px;
+    margin-right:210px;
+    border: 1px solid var(--green);
+    padding: 10px;
+    white-space: nowrap;
   }
 
-  .secound img {
-    width: 35%;
-    border-radius: 50%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
+  .secound li{
+list-style: none;
+line-height: 30px;
+  }
+
+  .ae {
+    text-align: left;
   }
 
   .third {
@@ -119,7 +146,8 @@ import Levering from "../components/levering.astro";
     font-size: 25px;
     text-align: center;
     color: var(--green);
-    margin-top: 150px;
+    margin-top: 90px;
+    margin-bottom: 30px;
   }
 
   .third video {
@@ -129,17 +157,7 @@ import Levering from "../components/levering.astro";
   }
 
   @media screen and (max-width: 900px) {
-    .overskrift {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
 
-    .overskrift img {
-      margin-top: 20px;
-    }
 
     .first {
       display: flex;
@@ -147,6 +165,14 @@ import Levering from "../components/levering.astro";
       justify-content: center;
       flex-direction: column;
       margin: 20px;
+      text-align: center;
+    }
+
+    .first img {
+      width: 80%;
+  max-width: 100%; /* Sørg for, at billedet ikke overstiger sin container */
+  margin: auto; /* Centrer billedet vandret */
+  display: block;
     }
 
     .first p {
@@ -155,14 +181,27 @@ import Levering from "../components/levering.astro";
       margin-top: 10px;
       max-width: 100%;
     }
+  .secound {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 3%;
+    margin: 20px;
+    border: 1px solid var(--green);
+    padding: 10px;
+
+  }
+
+  .ae {
+    text-align: center;
+  }
 
     .first img {
       max-width: 100%;
       height: auto;
     }
 
-    .secound img {
-      width: 75%;
-    }
   }
 </style>
