@@ -11,22 +11,22 @@ const { text } = Astro.props;
   .header {
     display: flex; /* Brug flex layout */
     align-items: center; /* Centrer indhold lodret */
+    padding-left: 30px;
+    margin-top: 30px;
   }
 
   .header h2 {
-    margin: 20px; /* Fjern standard margin */
+    margin: 2%; /* Fjern standard margin */
   }
 
-  .header img {
-    width: 70%; /* Automatisk bredde */
+   img {
+    max-width: 80%; /* Automatisk bredde */
     height: 30px; /* Fast højde, juster som nødvendigt */
     flex-grow: 1; /* Tillad billedet at fylde den resterende bredde */
-    margin-left: 20px; /* Afstand mellem billede og tekst */
-    margin-right: 20%;
-    object-fit: cover; /* Sikrer at billedet bevarer sit forhold */
+     object-fit: cover; /* Sikrer at billedet bevarer sit forhold */ */
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 700px) {
     .header {
       text-align: center;
       display: flex;
@@ -35,6 +35,9 @@ const { text } = Astro.props;
       padding: 20px;
     }
 
+    h2 {
+      font-size: x-large;
+    }
     .header img {
       margin-top: 20px;
     }
