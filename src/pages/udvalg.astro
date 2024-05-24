@@ -9,59 +9,57 @@ import TilbageKnap from "../components/tilbage_knap.astro";
 import Kurv from "../components/kurv.astro";
 
 const data = await fetch(
-    "https://dmmsxgbleguwsrjxcdfh.supabase.co/rest/v1/ae_blomster",
-    {
-      method: "GET",
-      headers: {
-        apikey:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRtbXN4Z2JsZWd1d3NyanhjZGZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMjU0NjMsImV4cCI6MjAzMDkwMTQ2M30.EUV_DuoCBgYOjjmQ10T54Q80kiR6_fejdBF3RdWfbv8",
-      },
-    }
-  ).then((response) => response.json());
-
-
-
+  "https://dmmsxgbleguwsrjxcdfh.supabase.co/rest/v1/ae_blomster",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRtbXN4Z2JsZWd1d3NyanhjZGZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMjU0NjMsImV4cCI6MjAzMDkwMTQ2M30.EUV_DuoCBgYOjjmQ10T54Q80kiR6_fejdBF3RdWfbv8",
+    },
+  }
+).then((response) => response.json());
 ---
 
+<head>
+  <link rel="icon" href="svg/logo.svg" />
+</head>
 <main>
-  <Banner></Banner>
-  <TilbageKnap></TilbageKnap>
+  <Banner />
+  <TilbageKnap />
   <section class="overskrift">
     <h1>Om os</h1>
-    <img src="/img/stregen2.webp" alt="">
+    <img src="/img/stregen2.webp" alt="" />
   </section>
 
-
-<section class="udvalg_grid">
-  {data.map(blomst=>{
-    return <ProductCard data={blomst} />
-  })}
-</section>
-<Footer />
+  <section class="udvalg_grid">
+    {
+      data.map((blomst) => {
+        return <ProductCard data={blomst} />;
+      })
+    }
+  </section>
+  <Footer />
 </main>
 
-
-
 <style>
-
-.overskrift {
+  .overskrift {
     display: flex;
     align-items: center;
     white-space: nowrap;
-}
+  }
 
-.overskrift h1 {
-    font-size: 40px; 
-    margin: 40px; 
-}
+  .overskrift h1 {
+    font-size: 40px;
+    margin: 40px;
+  }
 
-.overskrift img {
+  .overskrift img {
     height: 24px;
     width: 100%;
     margin: 20px;
-}
+  }
 
-  .udvalg_grid{
+  .udvalg_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 5%;
@@ -69,17 +67,16 @@ const data = await fetch(
   }
 
   @media screen and (max-width: 900px) {
+    .overskrift {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-.overskrift {
-  text-align: center; 
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  padding: 20px;
-}
-
-.overskrift img {
-  margin-top: 20px; 
-}
+    .overskrift img {
+      margin-top: 20px;
+    }
   }
 </style>
