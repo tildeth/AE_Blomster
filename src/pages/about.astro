@@ -1,5 +1,6 @@
 ---
 import "../style/style.css";
+import "../layout/layoyt.css";
 import Tilbage_knap from "../components/tilbage_knap.astro";
 import Header_card from "../components/header_card.astro";
 import Footer from "../components/footer.astro";
@@ -12,25 +13,17 @@ import Levering from "../components/levering.astro";
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="https://use.typekit.net/heg3tgx.css" />
   <link rel="icon" href="svg/logo.svg" />
-  <!-- google font skal convertes til woff2 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200..700&display=swap"
-    rel="stylesheet"
-  />
-
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
-  <title>Astro</title>
+  <title>Om os</title>
 </head>
 <body>
   <Banner />
-  <TilbageKnap />
+  <TilbageKnap <a href="../pages/index" />
 
   <Overskift text="Om Os">
     <img src="/img/stregen2.webp" alt="" />
@@ -39,33 +32,33 @@ import Levering from "../components/levering.astro";
   <section class="first">
     <img src="/img/IMG_3606 - Kopi.avif" alt="" />
     <div>
-    <h1>Det som du skal vide om os</h1>
-    <p>
-      Anna Elisabeth Blomster er stiftet af Rafi i 2021 og er opkaldt efter sin
-      datter. Anna Elisabeth Blomster ApS er en blomsterbutik med passion for at
-      levere smukke og unikke blomsterarrangementer til kunderne.
-      <br />
-       Butikken ligger i hjertet af Egedal lige ved Egedal St. i De Grønne
-      Porte. Som kunde kan man vælge mellem et udvalg af friske og farverige
-      blomster og planter. Hos Anna Elisabeth Blomster leverer de blomster af
-      høj kvalitet og fremragende kundeservice - og så kan de hjælpe med at
-      skabe det perfekte look og stemning.
-    </p>
-  </div>
+      <h1>Det som du skal vide om os</h1>
+      <p>
+        Anna Elisabeth Blomster er stiftet af Rafi i 2021 og er opkaldt efter
+        sin datter. Anna Elisabeth Blomster ApS er en blomsterbutik med passion
+        for at levere smukke og unikke blomsterarrangementer til kunderne.
+        <br />
+         Butikken ligger i hjertet af Egedal lige ved Egedal St. i De Grønne
+        Porte. Som kunde kan man vælge mellem et udvalg af friske og farverige
+        blomster og planter. Hos Anna Elisabeth Blomster leverer de blomster af
+        høj kvalitet og fremragende kundeservice - og så kan de hjælpe med at
+        skabe det perfekte look og stemning.
+      </p>
+    </div>
   </section>
 
   <section class="secound">
     <div class="opening-hours">
-<ul>
-  <h4>Åbningstider</h4>
-  <li>Mandag 10.00-18:00</li>
-<li>Tirsdag 10.00-18.00</li>
-<li>Onsdag 10.00-18.00</li>
-<li>Torsdag 10.00-18.00</li>
-<li>Fredag 10.00-18.00</li>
-<li>Lørdag 10.00-16.00</li>
-<li>Søndag 10.00-15.00</li>
-</ul>
+      <ul>
+        <h4>Åbningstider</h4>
+        <li>Mandag 10.00-18:00</li>
+        <li>Tirsdag 10.00-18.00</li>
+        <li>Onsdag 10.00-18.00</li>
+        <li>Torsdag 10.00-18.00</li>
+        <li>Fredag 10.00-18.00</li>
+        <li>Lørdag 10.00-16.00</li>
+        <li>Søndag 10.00-15.00</li>
+      </ul>
     </div>
 
     <div class="ae">
@@ -87,11 +80,10 @@ import Levering from "../components/levering.astro";
 </body>
 
 <style>
-
   .first {
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 50px;
     padding: 10px;
     margin-top: 5%;
@@ -106,7 +98,6 @@ align-items: center;
     margin-left: 200px;
     width: 100%;
     max-width: 800px;
-
   }
 
   .first p {
@@ -126,15 +117,15 @@ align-items: center;
     gap: 10px;
     margin-top: 3%;
     margin-left: 210px;
-    margin-right:210px;
+    margin-right: 210px;
     border: 1px solid var(--green);
     padding: 10px;
     white-space: nowrap;
   }
 
-  .secound li{
-list-style: none;
-line-height: 30px;
+  .secound li {
+    list-style: none;
+    line-height: 30px;
   }
 
   .ae {
@@ -157,8 +148,6 @@ line-height: 30px;
   }
 
   @media screen and (max-width: 900px) {
-
-
     .first {
       display: flex;
       align-items: center;
@@ -170,9 +159,9 @@ line-height: 30px;
 
     .first img {
       width: 80%;
-  max-width: 100%; /* Sørg for, at billedet ikke overstiger sin container */
-  margin: auto; /* Centrer billedet vandret */
-  display: block;
+      max-width: 100%; /* Sørg for, at billedet ikke overstiger sin container */
+      margin: auto; /* Centrer billedet vandret */
+      display: block;
     }
 
     .first p {
@@ -181,27 +170,25 @@ line-height: 30px;
       margin-top: 10px;
       max-width: 100%;
     }
-  .secound {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    margin-top: 3%;
-    margin: 20px;
-    border: 1px solid var(--green);
-    padding: 10px;
+    .secound {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      margin-top: 3%;
+      margin: 20px;
+      border: 1px solid var(--green);
+      padding: 10px;
+    }
 
-  }
-
-  .ae {
-    text-align: center;
-  }
+    .ae {
+      text-align: center;
+    }
 
     .first img {
       max-width: 100%;
       height: auto;
     }
-
   }
 </style>
