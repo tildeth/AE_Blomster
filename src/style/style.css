@@ -14,6 +14,11 @@
   src: url();
 }
 
+@font-face {
+  font-family: "yaldevi";
+  src: url("../font/yaldevi.woff2");
+}
+
 body {
   background-color: var(--sand);
 }
@@ -32,19 +37,19 @@ h2 {
 }
 
 h3 {
-  font-family: "Yaldevi", sans-serif;
+  font-family: "yaldevi", sans-serif;
   color: var(--brown);
   font-size: 50px;
   font-weight: 200;
 }
 
 p {
-  font-family: "Yaldevi", sans-serif;
+  font-family: "yaldevi", sans-serif;
   color: var(--brown);
 }
 
 .extra_t {
-  font-family: "Yaldevi", sans-serif;
+  font-family: "yaldevi", sans-serif;
   color: var(--green);
 
   .link {
@@ -53,20 +58,20 @@ p {
 }
 
 h4 {
-  font-family: "Yaldevi", sans-serif;
+  font-family: "yaldevi", sans-serif;
   color: var(--brown);
   font-size: 20px;
   font-weight: bold;
 }
 
 p {
-  font-family: "Yaldevi", sans-serif;
+  font-family: "yaldevi", sans-serif;
   color: var(--brown);
   max-width: 50ch;
 }
 
 .extra_t {
-  font-family: "Yaldevi", sans-serif;
+  font-family: "yaldevi", sans-serif;
   color: var(--green);
 }
 
