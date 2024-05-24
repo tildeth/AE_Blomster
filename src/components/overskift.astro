@@ -25,4 +25,18 @@ const { text } = Astro.props;
     margin-right: 20%;
     object-fit: cover; /* Sikrer at billedet bevarer sit forhold */
   }
+
+  @media screen and (max-width: 900px) {
+    .header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .header img {
+      margin-top: 20px;
+    }
+  }
 </style>
