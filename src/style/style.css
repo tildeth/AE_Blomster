@@ -57,6 +57,22 @@ p {
   }
 }
 
+.e1{
+  margin-left: 450px;
+  text-align: center;
+
+}
+
+.e2{
+  grid-column: 2/3;
+
+}
+
+.e3{
+margin-left: 215px;
+
+}
+
 h4 {
   font-family: "yaldevi", sans-serif;
   color: var(--brown);
@@ -70,10 +86,7 @@ p {
   max-width: 50ch;
 }
 
-.extra_t {
-  font-family: "yaldevi", sans-serif;
-  color: var(--green);
-}
+
 
 text {
   max-width: 45ch;
