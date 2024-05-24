@@ -28,6 +28,7 @@ h2 {
   color: var(--pink);
   font-size: xx-large;
   margin-left: 20px;
+  white-space: nowrap;
 }
 
 h3 {
@@ -46,11 +47,10 @@ p {
   font-family: "Yaldevi", sans-serif;
   color: var(--green);
 
-    .link{
-      color: var(--pink);
-
-    }
+  .link {
+    color: var(--pink);
   }
+}
 
 h4 {
   font-family: "Yaldevi", sans-serif;
