@@ -34,18 +34,15 @@ import "../style/style.css";
     position: relative;
     background-image: url(../../svg/footer.svg);
     background-size: 100%;
-    aspect-ratio: 1040/560;
+    aspect-ratio: 1440/563;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .footer_grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: relative;
-    top: 40%;
+    top: 20%;
 }
 .foot2{
     display: flex;
@@ -54,11 +51,11 @@ import "../style/style.css";
     height: 100%;
 }
 .foot1, .foot3{
-    font-size: 160%;
+    font-size: 80%;
     margin-left: 7%;
 }
 .find_os_foot{
-    font-size: 160%;
+    font-size: 80%;
 }
 .logo_foot{
     position: relative;
@@ -87,13 +84,16 @@ import "../style/style.css";
     aspect-ratio: 1/1;
     width: 10%;
 }
+.cr_foot{
+    font-size: 80%;
+}
 
-@media (max-width: 1150px){
+/* @media (max-width: 1150px){
     .bg_footer{
     position: relative;
     background-image: url(../../svg/footer.svg);
     background-size: 100%;
-    aspect-ratio: 1040/560;
+    aspect-ratio: 1440/563;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -153,7 +153,7 @@ import "../style/style.css";
     position: relative;
     background-image: url(../../svg/footer.svg);
     background-size: 100%;
-    aspect-ratio: 1040/560;
+    aspect-ratio: 1440/563;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -209,26 +209,26 @@ import "../style/style.css";
 .cr_foot{
     font-size: 70%;
 }
-}
+} */
 
 @media (max-width: 700px){
     .bg_footer{
     position: relative;
     background-image: url(../../svg/footer_mobile.svg);
     background-size: 100%;
-    aspect-ratio: 1040/1210;
+    aspect-ratio: 379/216;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
 .footer_grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
-    top: 15%;
-}
+    top: 20%;
+    gap: 40px;
+    padding: 0;
 .foot2{
     display: flex;
     flex-direction: column;
@@ -237,7 +237,7 @@ import "../style/style.css";
     grid-column: 1/3;
 }
 .foot1, .foot3{
-    font-size: 100%;
+    font-size: 60%;
     margin-left: 7%;
     margin-bottom: -50px;
 }
@@ -246,7 +246,7 @@ import "../style/style.css";
     grid-row: 1/2;
 }
 .find_os_foot{
-    font-size: 100%;
+    font-size: 60%;
 }
 .logo_foot{
     display: none;
@@ -254,8 +254,8 @@ import "../style/style.css";
 .icon_foot{
     display: flex;
     justify-content: center;
-    gap: 1.5%;
-    width: 100%;
+    gap: 2%;
+    width: 50%;
 }
 .fb_foot{
     position: relative;
@@ -272,7 +272,7 @@ import "../style/style.css";
     width: 10%;
 }
 .cr_foot{
-    font-size: 50%;
+    font-size: 60%;
 }
-}
+}}
 </style>
