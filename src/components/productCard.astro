@@ -1,24 +1,21 @@
 ---
 import "../style/style.css";
-const { src, name, price } = Astro.props;
 
-const images = [
-  { src: 'path/to/image1.jpg', name: 'Image 1', price: '$10' },
-  { src: 'path/to/image2.jpg', name: 'Image 2', price: '$15' },
-  { src: 'path/to/image3.jpg', name: 'Image 3', price: '$20' },
-  { src: 'path/to/image4.jpg', name: 'Image 4', price: '$25' },
-  { src: 'path/to/image5.jpg', name: 'Image 5', price: '$30' },
-  { src: 'path/to/image6.jpg', name: 'Image 6', price: '$35' },
-];
+const {data} = Astro.props;
+
 ---
 
-    <div class="polaroid">
-        <img src={src} alt={name}/>
+<a href={`/udvalg/${data.slog}`}>
+    <article class="polaroid">
+<div class="pcard_box">
+        <img src={data.billede} alt="billede"/>
+</div>
         <div class="product">
-            <p>{name}</p>
-            <p class="bold">{price}</p>
+          <p class="bold">{data.produktnavn}</p>
+          <p>{data.pris}</p>
         </div>
-    </div>
+    </article>
+  </a>
 
   <style>
 .polaroid {
@@ -36,8 +33,20 @@ const images = [
     height: auto;
   }
 
+  .pcard_box{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+
   .bold {
     font-weight: bold;
+  }
+
+  .product{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   </style>
   
