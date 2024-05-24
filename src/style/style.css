@@ -87,7 +87,9 @@ p {
 }
 
 
-
+.o1{
+  margin-right: 150px;
+}
 text {
   max-width: 45ch;
 }
