@@ -1,5 +1,9 @@
 ---
 import "../style/style.css";
+const k_navn = Astro.props.k_navn;
+const k_img = Astro.props.k_img;
+const k_pris = Astro.props.k_pris;
+
 ---
 <div class="popup">
 <div class="box">
@@ -10,10 +14,10 @@ import "../style/style.css";
 </section>
 
 <section class="secound">
-<img src="/img/IMG_3665 - Kopi.avif" alt="">
-<div>
-<p class="bold">Blå Elegance</p>
-<p>Pris: 280 kr.</p>
+    <div>
+    <img src={k_img} alt="billede">
+    <p class="bold">{k_navn}</p>
+    <p>Pris: {k_pris} kr.</p>
 </div>
 </section>
 

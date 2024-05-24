@@ -1,5 +1,6 @@
 ---
 import "../../style/style.css";
+import Kurv from "../../components/kurv.astro"
 
 export async function getStaticPaths() {
   const data = await fetch(
@@ -36,8 +37,13 @@ const { single } = Astro.props;
     </div>
     <p class="bold">Beskrivelse</p>
     <p>{single.beskrivelse}</p>
+    <button id="add_knap">Tilføj til kurv</button>
   </div>
+<div id="kurv2" class="hide">
+  <Kurv k_navn={single.produktnavn} k_img={single.billede} k_pris={single.pris} />
+</div>
 </article>
+
 
 <style>
   img {
@@ -62,4 +68,22 @@ const { single } = Astro.props;
   }
   .textbox_single {
   }
-</style>
+  
+  .hide{
+    display: none;
+  }
+  </style>
+
+<script>
+  function tilfojKurv() {
+    console.log("Tilføj til kurv");
+
+    document.querySelector("#kurv2").classList.remove("hide");
+  }
+
+  function start() {
+    document.querySelector("#add_knap").addEventListener("click", tilfojKurv);
+  }
+
+  document.addEventListener("DOMContentLoaded", start);
+</script>
