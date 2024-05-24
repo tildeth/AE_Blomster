@@ -60,7 +60,6 @@ p {
 .e1{
   margin-left: 450px;
   text-align: center;
-
 }
 
 .e2{
@@ -92,4 +91,19 @@ p {
 }
 text {
   max-width: 45ch;
+}
+
+
+@media screen and (min-width: 500px) {
+
+  .e1{
+      margin-left: 20px;
+    }
+    .e3{
+      margin-left: 150px;
+      
+      }
+    .o1{
+      margin-right: 0px;
+    }
 }
