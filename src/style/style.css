@@ -1,6 +1,6 @@
 :root {
   --sand: #fbf7eb;
-  --green: #5B7A28;
+  --green: #5b7a28;
   --pink: #d7709d;
   --brown: #342015;
   --white: #f1f1f3;
@@ -50,27 +50,29 @@ p {
 
 .extra_t {
   font-family: "yaldevi", sans-serif;
-  color: var(--green);
-
-  .link {
-    color: var(--pink);
-  }
+  font-size: 15px;
+  color: var(--drak_green);
+  line-height: 2;
+  white-space: nowrap;
+  margin-top: 20px;
+  margin-bottom: -50px;
 }
 
-.e1{
+.link {
+  color: var(--pink);
+}
+
+.e1 {
   margin-left: 450px;
   text-align: center;
-
 }
 
-.e2{
+.e2 {
   grid-column: 2/3;
-
 }
 
-.e3{
-margin-left: 215px;
-
+.e3 {
+  margin-left: 215px;
 }
 
 h4 {
@@ -78,6 +80,7 @@ h4 {
   color: var(--brown);
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: -5px;
 }
 
 p {
@@ -86,8 +89,7 @@ p {
   max-width: 50ch;
 }
 
-
-.o1{
+.o1 {
   margin-right: 150px;
 }
 text {
