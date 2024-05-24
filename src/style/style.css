@@ -95,3 +95,18 @@ p {
 text {
   max-width: 45ch;
 }
+
+
+@media screen and (max-width: 700px) {
+
+  .e1{
+      margin-left: 20px;
+    }
+    .e3{
+      margin-left: 150px;
+      
+      }
+    .o1{
+      margin-right: 0px;
+    }
+}

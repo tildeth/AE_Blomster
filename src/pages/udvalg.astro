@@ -21,15 +21,19 @@ const data = await fetch(
 ---
 
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="https://use.typekit.net/heg3tgx.css" />
   <link rel="icon" href="svg/logo.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Udvalg</title>
 </head>
 <main>
   <Banner />
   <TilbageKnap />
-  <section class="overskrift">
-    <h1>Om os</h1>
-    <img src="/img/stregen2.webp" alt="" />
-  </section>
+  <Overskift text="Udvalg" />
 
   <section class="udvalg_grid">
     {
@@ -38,8 +42,8 @@ const data = await fetch(
       })
     }
   </section>
-  <Footer />
 </main>
+<footer><Footer /></footer>
 
 <style>
   .overskrift {
