@@ -48,12 +48,9 @@ p {
 
     .link{
       color: var(--pink);
-<<<<<<< HEAD
+
     }
   }
-=======
-    } */
-}
 
 h4 {
   font-family: "Yaldevi", sans-serif;
@@ -76,4 +73,3 @@ p {
 text {
   max-width: 45ch;
 }
->>>>>>> abfd46d1231496546cb45efa3abc79a5fe309193
