@@ -1,6 +1,6 @@
 ---
 import "../style/style.css";
-import "../layout/layoyt.css";
+import "../layout/layout.css";
 import Tilbage_knap from "../components/tilbage_knap.astro";
 import Header_card from "../components/header_card.astro";
 import Footer from "../components/footer.astro";
@@ -9,6 +9,7 @@ import Overskift from "../components/overskift.astro";
 import TilbageKnap from "../components/tilbage_knap.astro";
 import Kurv from "../components/kurv.astro";
 import Levering from "../components/levering.astro";
+import UndersideHeader from "../components/undersideHeader.astro";
 ---
 
 <head>
@@ -22,7 +23,10 @@ import Levering from "../components/levering.astro";
   <title>Om os</title>
 </head>
 <body>
-  <Banner />
+  <header>
+    <Banner />
+    <UndersideHeader/>
+  </header>
   <TilbageKnap <a href="../pages/index" />
 
   <Overskift text="Om Os">
