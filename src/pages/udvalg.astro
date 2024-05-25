@@ -7,6 +7,7 @@ import Overskift from "../components/overskift.astro";
 import ProductCard from "../components/productCard.astro";
 import TilbageKnap from "../components/tilbage_knap.astro";
 import Kurv from "../components/kurv.astro";
+import UndersideHeader from "../components/undersideHeader.astro";
 
 const data = await fetch(
   "https://dmmsxgbleguwsrjxcdfh.supabase.co/rest/v1/ae_blomster",
@@ -30,8 +31,12 @@ const data = await fetch(
   <meta name="generator" content={Astro.generator} />
   <title>Udvalg</title>
 </head>
-<main>
+<header>
   <Banner />
+  <UndersideHeader/>
+</header>
+<main>
+  
   <a href="/#"><TilbageKnap /></a>
 
   <Overskift text="Udvalg" />
