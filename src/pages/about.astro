@@ -22,19 +22,21 @@ import UndersideHeader from "../components/undersideHeader.astro";
   <title>Om os</title>
 </head>
 <body>
-<header>
+  <header>
     <Banner />
-    <UndersideHeader/>
+    <div class="grid_1-1">
+      <a href="/#"><Tilbage_knap /></a>
+      <UndersideHeader />
+    </div>
   </header>
-  <Tilbage_knap <a href="../pages/index" />
-
 
   <Overskift text="Om Os">
     <img src="/img/stregen2.webp" alt="" />
   </Overskift>
 
   <section class="first">
-    <img src="/img/IMG_3606 - Kopi.avif" alt="" />
+    <div><img src="/img/IMG_3606 - Kopi.avif" alt="" /></div>
+
     <div>
       <h1>Det som du skal vide om os</h1>
       <p>
@@ -85,9 +87,10 @@ import UndersideHeader from "../components/undersideHeader.astro";
 
 <style>
   .first {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*     justify-content: center;
+    align-items: center; */
     gap: 50px;
     padding: 10px;
     margin-top: 5%;
@@ -96,17 +99,19 @@ import UndersideHeader from "../components/undersideHeader.astro";
   .first h1 {
     font-size: 35px;
     margin-bottom: 60px;
+    margin-left: 50px;
   }
 
   .first img {
-    margin-left: 200px;
-    width: 100%;
-    max-width: 800px;
+    /*     margin-left: 200px;
+    width: 100%; */
+    max-width: 550px;
   }
 
   .first p {
-    max-width: 75%;
+    max-width: 80%;
     line-height: 2.3;
+    margin-left: 50px;
   }
 
   br {

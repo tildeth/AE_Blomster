@@ -95,6 +95,10 @@ text {
   max-width: 45ch;
 }
 
+a{
+text-decoration: none;
+}
+
 
 @media screen and (max-width: 700px) {
 
