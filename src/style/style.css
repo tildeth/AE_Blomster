@@ -31,7 +31,7 @@ h1 {
 h2 {
   font-family: "hwt-arabesque";
   color: var(--pink);
-  font-size: xx-large;
+  font-size: 40px;
   margin-left: 20px;
   white-space: nowrap;
 }
@@ -54,7 +54,6 @@ p {
   color: var(--drak_green);
   line-height: 2;
   margin-top: 20px;
-
 }
 
 .link {
@@ -63,15 +62,15 @@ p {
 
 .e1 {
   margin-left: 450px;
-  text-align: center;
 }
 
 .e2 {
+  margin-left: 295px;
   grid-column: 2/3;
 }
 
 .e3 {
-  margin-left: 215px;
+  margin-left: 248px;
 }
 
 h4 {
@@ -85,7 +84,6 @@ h4 {
 p {
   font-family: "yaldevi", sans-serif;
   color: var(--brown);
-  max-width: 50ch;
 }
 
 .o1 {
@@ -95,22 +93,28 @@ text {
   max-width: 45ch;
 }
 
-a{
-text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-
 @media screen and (max-width: 700px) {
+  .e1 {
+    margin-left: 20px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+  }
 
-  .e1{
-      margin-left: 20px;
-      padding-bottom: 15px;
-    }
-    .e3{
-      margin-left: 150px;
-      
-      }
-    .o1{
-      margin-right: 0px;
-    }
+  .e2 {
+    margin-left: 180px;
+    white-space: nowrap;
+  }
+  .e3 {
+    margin-left: 150px;
+  }
+  .o1 {
+    margin-right: 0px;
+  }
 }

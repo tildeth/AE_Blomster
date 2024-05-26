@@ -22,6 +22,7 @@ export async function getStaticPaths() {
 }
 
 const { single } = Astro.props;
+
 ---
 
 <html>
@@ -37,17 +38,21 @@ const { single } = Astro.props;
   </head>
 
   <article class="singleview">
+
     <img src={single.billede} alt="billede" />
     <div class="textbox_single">
+
       <h3>{single.produktnavn}</h3>
       <div class="textbox2">
         <p class="bold">Pris</p>
         <p class="bold">Farver</p>
-        <p>{single.pris}</p>
+        <p>{single.pris},-</p>
         <p>{single.farver}</p>
       </div>
+      <div class="tekst">
       <p class="bold">Beskrivelse</p>
       <p>{single.beskrivelse}</p>
+    </div>
     </div>
   </article>
 
@@ -63,17 +68,64 @@ const { single } = Astro.props;
     }
 
     .singleview {
+      font-size: 18px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin: 5%;
       gap: 5%;
     }
     .textbox2 {
+      white-space: nowrap;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      line-height: 0.01;
+      margin-bottom: 50px;
+      
     }
-    .textbox_single {
+
+    .tekst {
+      line-height: 1.5;
     }
+
+    @media screen and (max-width: 900px) {
+      .singleview {
+    grid-template-columns: 1fr;
+  }
+
+  .textbox_single {
+    align-items: flex-start;
+  }
+
+  .textbox2 {
+    margin-bottom: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .row p {
+    margin: 0;
+    padding: 4px 0;
+  }
+
+  .bold {
+    width: 100%;
+  }
+
+
+  img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      margin-bottom: -40px;
+    }
+
+  }
+
+
   </style>
 
 

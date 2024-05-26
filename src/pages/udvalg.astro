@@ -46,8 +46,8 @@ const categories = ["all", "Buket", "Plante", "Vase"];
     <Overskift text="Udvalg" />
 
     <div id="filter-buttons" class="demo">
-      Filter:
-      <div>
+      <p>Filter:</p>
+      <div class="style">
         {
           categories.map((category) => (
             <button type="button" onClick={`filterItems('${category}')`}>
@@ -79,6 +79,32 @@ const categories = ["all", "Buket", "Plante", "Vase"];
       margin: 5%;
       gap: 5%;
     }
+
+  .demo{
+    font-size: 16px;
+      line-height: 0.5;
+    }
+
+    .style button {
+  background-color: var(--drak_green); 
+  border: none; 
+  color: white; 
+  padding: 10px 8px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 8px; 
+  transition-duration: 0.4s; 
+}
+
+.style button:hover {
+  color: var(--pink); 
+}
+
+
     @media screen and (max-width: 1100px) {
       .udvalg_grid {
         display: grid;

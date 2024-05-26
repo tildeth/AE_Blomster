@@ -100,6 +100,7 @@ import UndersideHeader from "../components/undersideHeader.astro";
     font-size: 35px;
     margin-bottom: 60px;
     margin-left: 50px;
+max-width: 100%;
   }
 
   .first img {
@@ -129,7 +130,6 @@ import UndersideHeader from "../components/undersideHeader.astro";
     margin-right: 210px;
     border: 1px solid var(--green);
     padding: 10px;
-    white-space: nowrap;
   }
 
   .secound li {
@@ -142,18 +142,23 @@ import UndersideHeader from "../components/undersideHeader.astro";
   }
 
   .third {
+   text-align: center;
     margin-top: 5%;
     font-size: 25px;
     text-align: center;
     color: var(--green);
-    margin-top: 90px;
-    margin-bottom: 30px;
+    margin-top: -160px;
+    margin-bottom: 10px;
+    line-height: 4;
   }
 
   .third video {
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: auto;
-    padding: 40px;
+    padding: 10px;
   }
 
   @media screen and (max-width: 900px) {
@@ -196,8 +201,36 @@ import UndersideHeader from "../components/undersideHeader.astro";
     }
 
     .first img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       max-width: 100%;
       height: auto;
     }
+
+   .opening-hours h4 {
+      line-height: 60px;
+      text-decoration: underline;
+    }
+
+    .first h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    max-width: 100%;
+    margin-left: 0px;
+  }
+
+
+  .first p {
+    align-items: center;
+      text-align: center;
+    max-width: 80%;
+    line-height: 2.3;
+    margin-left: 35px;
+  }
+
   }
 </style>
