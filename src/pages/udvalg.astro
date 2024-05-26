@@ -44,7 +44,7 @@ const categories = ["all", "Buket", "Plante", "Vase"];
   </header>
   <main>
     <Overskift text="Udvalg" />
-
+<div class="container">
     <div id="filter-buttons" class="demo">
       <p>Filter:</p>
       <div class="style">
@@ -56,6 +56,7 @@ const categories = ["all", "Buket", "Plante", "Vase"];
           ))
         }
       </div>
+    </div>
     </div>
 
     <section id="product-grid" class="udvalg_grid">
@@ -73,19 +74,27 @@ const categories = ["all", "Buket", "Plante", "Vase"];
   </main>
   <footer><Footer /></footer>
   <style>
+
     .udvalg_grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      margin: 5%;
+    
       gap: 5%;
+      margin: auto;
     }
-
+.container{
+  margin-right: 55px;
+    display: flex;
+  justify-content: flex-end;
+}
   .demo{
+
     font-size: 16px;
       line-height: 0.5;
     }
 
     .style button {
+    
   background-color: var(--drak_green); 
   border: none; 
   color: white; 
@@ -129,6 +138,16 @@ const categories = ["all", "Buket", "Plante", "Vase"];
         display: block;
         padding: 10px;
       }
+      .container{
+  margin-left: 60px;
+    display: flex;
+  justify-content: flex-start;
+}
+  .demo{
+
+    font-size: 16px;
+      line-height: 0.5;
+    }
     }
   </style>
   <script>

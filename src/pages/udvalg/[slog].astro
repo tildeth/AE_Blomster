@@ -53,10 +53,16 @@ const { single } = Astro.props;
       <p class="bold">Beskrivelse</p>
       <p>{single.beskrivelse}</p>
     </div>
+    <button class="kurv">
+      <h5>Læg i kurv (1)</h5>
+      <img src="" alt="">
+  </button>
     </div>
+
   </article>
 
   <style>
+
     img {
       display: block;
       width: 100%;
@@ -86,6 +92,26 @@ const { single } = Astro.props;
     .tekst {
       line-height: 1.5;
     }
+
+.kurv {
+  margin-top: 40px;
+  margin-left: 410px;
+  color: var(--white);
+  background-color: var(--drak_green);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+
+}
+
+.kurv:hover {
+  color: var(--pink);
+}
+
 
     @media screen and (max-width: 900px) {
       .singleview {
@@ -122,6 +148,15 @@ const { single } = Astro.props;
       margin-top: 20px;
       margin-bottom: -40px;
     }
+
+    .kurv {
+  display: flex; /* Gør knappens container til en fleksibel container */
+  justify-content: flex-start; 
+  align-items: left; 
+  text-align: center; /* Centrerer teksten inden i knappen */
+  padding: 10px 20px; /* Tilpas padding efter behov */
+  white-space: nowrap;
+}
 
   }
 
