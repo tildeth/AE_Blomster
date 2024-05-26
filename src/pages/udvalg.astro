@@ -45,27 +45,12 @@ const categories = ["all", "Buket", "Plante", "Vase"];
   <main>
     <Overskift text="Udvalg" />
 
-    <div id="filter-buttons" class="demo">
-      Filter:
-      <div>
-        {
-          categories.map((category) => (
-            <button type="button" onClick={`filterItems('${category}')`}>
-              {category}
-            </button>
-          ))
-        }
-      </div>
-    </div>
-
     <section id="product-grid" class="udvalg_grid">
       {
         data.map((blomst) => (
           <ProductCard
-            key={blomst.id}
             data={blomst}
             loading="lazy"
-            data-category={blomst.category}
           />
         ))
       }
@@ -105,70 +90,6 @@ const categories = ["all", "Buket", "Plante", "Vase"];
       }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      function filterItems(category) {
-        console.log("Filtering items for category:", category); // Debug information
-        const items = document.querySelectorAll(".udvalg_grid > *");
-        items.forEach((item) => {
-          const itemCategory = item.getAttribute("data-category");
-          console.log("Item category:", itemCategory); // Debug information
-          if (category === "all" || itemCategory === category) {
-            item.style.display = "block";
-          } else {
-            item.style.display = "none";
-          }
-        });
-      }
-
-      // Make filterItems available globally
-      window.filterItems = filterItems;
-
-      // Show all items by default
-      filterItems("all");
-    });
-  </script>
-
-  <!-- <script>
-  async function fetchData() {
-    const response = await fetch(
-      "https://dmmsxgbleguwsrjxcdfh.supabase.co/rest/v1/ae_blomster",
-      {
-        method: "GET",
-        headers: {
-          apikey:
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRtbXN4Z2JsZWd1d3NyanhjZGZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMjU0NjMsImV4cCI6MjAzMDkwMTQ2M30.EUV_DuoCBgYOjjmQ10T54Q80kiR6_fejdBF3RdWfbv8",
-        },
-      }
-    );
-    return response.json();
-  }
-
-  async function filterProducts(category) {
-    const productList = document.getElementById('product-grid');
-    productList.innerHTML = ''; // Nulstil produktlisten
-
-    const products = await fetchData();
-
-    if (category === 'all') {
-      // Vis alle produkter, hvis kategorien er "Alle"
-      products.forEach(product => {
-        productList.innerHTML += `<div>${product.name}</div>`; // Udskriv produktets navn
-      });
-    } else {
-      // Vis kun produkter med den valgte kategori
-      const filteredProducts = products.filter(product => product.category.toLowerCase() === category.toLowerCase());
-      filteredProducts.forEach(product => {
-        productList.innerHTML += `<div>${product.name}</div>`; // Udskriv produktets navn
-      });
-    }
-  }
-
-  // Initial visning af alle produkter
-  window.onload = () => {
-    filterProducts('all');
-  };
-</script> -->
 
 
 </html>
