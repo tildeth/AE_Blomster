@@ -1,6 +1,5 @@
 ---
 import "../../style/style.css";
-import Kurv from "../../components/kurv.astro"
 
 export async function getStaticPaths() {
   const data = await fetch(
@@ -25,65 +24,57 @@ export async function getStaticPaths() {
 const { single } = Astro.props;
 ---
 
-<article class="singleview">
-  <img src={single.billede} alt="billede" />
-  <div class="textbox_single">
-    <h3>{single.produktnavn}</h3>
-    <div class="textbox2">
-      <p class="bold">Pris</p>
-      <p class="bold">Farver</p>
-      <p>{single.pris}</p>
-      <p>{single.farver}</p>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://use.typekit.net/heg3tgx.css" />
+    <link rel="icon" href="svg/logo.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Udvalg</title>
+  </head>
+
+  <article class="singleview">
+    <img src={single.billede} alt="billede" />
+    <div class="textbox_single">
+      <h3>{single.produktnavn}</h3>
+      <div class="textbox2">
+        <p class="bold">Pris</p>
+        <p class="bold">Farver</p>
+        <p>{single.pris}</p>
+        <p>{single.farver}</p>
+      </div>
+      <p class="bold">Beskrivelse</p>
+      <p>{single.beskrivelse}</p>
     </div>
-    <p class="bold">Beskrivelse</p>
-    <p>{single.beskrivelse}</p>
-    <button id="add_knap">Tilføj til kurv</button>
-  </div>
-<div id="kurv2" class="hide">
-  <Kurv k_navn={single.produktnavn} k_img={single.billede} k_pris={single.pris} />
-</div>
-</article>
+  </article>
 
+  <style>
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
-<style>
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+    .bold {
+      font-weight: bold;
+    }
 
-  .bold {
-    font-weight: bold;
-  }
-
-  .singleview {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 5%;
-    gap: 5%;
-  }
-  .textbox2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .textbox_single {
-  }
-  
-  .hide{
-    display: none;
-  }
+    .singleview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 5%;
+      gap: 5%;
+    }
+    .textbox2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .textbox_single {
+    }
   </style>
 
-<script>
-  function tilfojKurv() {
-    console.log("Tilføj til kurv");
 
-    document.querySelector("#kurv2").classList.remove("hide");
-  }
-
-  function start() {
-    document.querySelector("#add_knap").addEventListener("click", tilfojKurv);
-  }
-
-  document.addEventListener("DOMContentLoaded", start);
-</script>
+</html>
