@@ -2,14 +2,8 @@
 import "../../style/style.css";
 
 import Kurv from "../../components/kurv.astro"
-
-import Header_card from "../../components/header_card.astro";
 import Footer from "../../components/footer.astro";
 import Banner from "../../components/banner.astro";
-import Overskift from "../../components/overskift.astro";
-import Tips from "../../components/tips.astro";
-import Inspi_card from "../../components/inspi_card.astro";
-import Kurv from "../../components/kurv.astro";
 import TilbageKnap from "../../components/tilbage_knap.astro";
 import Levering from "../../components/levering.astro";
 import UndersideHeader from "../../components/undersideHeader.astro";
@@ -39,7 +33,6 @@ const { single } = Astro.props;
 
 ---
 
-<<<<<<< HEAD
 <article class="singleview">
   <img src={single.billede} alt="billede" />
   <div class="textbox_single">
@@ -59,7 +52,6 @@ const { single } = Astro.props;
 </div>
 </article>
 
-=======
 <html>
   <head>
     <meta charset="utf-8" />
@@ -108,19 +100,6 @@ const { single } = Astro.props;
   <Levering />
   <Footer />
 
-<script>
-   document.addEventListener('DOMContentLoaded', function() {
-        const addToCartButton = document.getElementById('addToCartButton');
-        const kurvContainer = document.getElementById('kurvContainer');
-
-        addToCartButton.addEventListener('click', function() {
-            kurvContainer.style.display = 'block';
-        });
-    });
-
-</script>
->>>>>>> ceef2c4dd32eabb6b03c00bca39b8b150fe8b69c
-
   <style>
     img {
       display: block;
@@ -146,11 +125,9 @@ const { single } = Astro.props;
     .textbox_single {
     }
 
-<<<<<<< HEAD
     .hide{
     display: none;
   }
-=======
     .tekst {
       line-height: 1.5;
     }
@@ -224,20 +201,16 @@ const { single } = Astro.props;
 
   }
 
-
->>>>>>> ceef2c4dd32eabb6b03c00bca39b8b150fe8b69c
   </style>
 
 <script>
-  function tilfojKurv() {
-    console.log("Tilføj til kurv");
 
-    document.querySelector("#kurv2").classList.remove("hide");
-  }
+   document.addEventListener('DOMContentLoaded', function() {
+        const addToCartButton = document.getElementById('addToCartButton');
+        const kurvContainer = document.getElementById('kurvContainer');
 
-  function start() {
-    document.querySelector("#add_knap").addEventListener("click", tilfojKurv);
-  }
-
-  document.addEventListener("DOMContentLoaded", start);
+        addToCartButton.addEventListener('click', function() {
+            kurvContainer.style.display = 'block';
+        });
+    });
 </script>
