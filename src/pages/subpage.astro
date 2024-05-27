@@ -44,28 +44,11 @@ const data = await fetch(
   </header>
   <main>
     <Overskift text="Udvalg" />
-<<<<<<< HEAD
-<div class="container">
-    <div id="filter-buttons" class="demo">
-      <p>Filter:</p>
-      <div class="style">
-        {
-          categories.map((category) => (
-            <button type="button" onClick={`filterItems('${category}')`}>
-              {category}
-            </button>
-          ))
-        }
-      </div>
-    </div>
-    </div>
-=======
 
 <Filter filterLink="/udvalg" filterText="Alle produkter" />
 <Filter filterLink="/subpage" filterText="Blomster og planter" />
 <Filter />
 <Filter />
->>>>>>> filterv3
 
     <section class="udvalg_grid">
       {
@@ -80,46 +63,12 @@ const data = await fetch(
   </main>
   <footer><Footer /></footer>
   <style>
-
     .udvalg_grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-    
+      margin: 5%;
       gap: 5%;
-      margin: auto;
     }
-.container{
-  margin-right: 55px;
-    display: flex;
-  justify-content: flex-end;
-}
-  .demo{
-
-    font-size: 16px;
-      line-height: 0.5;
-    }
-
-    .style button {
-    
-  background-color: var(--drak_green); 
-  border: none; 
-  color: white; 
-  padding: 10px 8px; 
-  text-align: center; 
-  text-decoration: none; 
-  display: inline-block; 
-  font-size: 16px; 
-  margin: 4px 2px; 
-  cursor: pointer; 
-  border-radius: 8px; 
-  transition-duration: 0.4s; 
-}
-
-.style button:hover {
-  color: var(--pink); 
-}
-
-
     @media screen and (max-width: 1100px) {
       .udvalg_grid {
         display: grid;
@@ -144,18 +93,6 @@ const data = await fetch(
         display: block;
         padding: 10px;
       }
-      .container{
-  margin-left: 60px;
-    display: flex;
-  justify-content: flex-start;
-}
-  .demo{
-
-    font-size: 16px;
-      line-height: 0.5;
-    }
     }
   </style>
 
-
-</html>

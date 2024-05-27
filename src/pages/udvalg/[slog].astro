@@ -1,5 +1,6 @@
 ---
 import "../../style/style.css";
+import Kurv from "../../components/kurv.astro"
 
 export async function getStaticPaths() {
   const data = await fetch(
@@ -25,143 +26,65 @@ const { single } = Astro.props;
 
 ---
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="https://use.typekit.net/heg3tgx.css" />
-    <link rel="icon" href="svg/logo.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Udvalg</title>
-  </head>
-
-  <article class="singleview">
-
-    <img src={single.billede} alt="billede" />
-    <div class="textbox_single">
-
-      <h3>{single.produktnavn}</h3>
-      <div class="textbox2">
-        <p class="bold">Pris</p>
-        <p class="bold">Farver</p>
-        <p>{single.pris},-</p>
-        <p>{single.farver}</p>
-      </div>
-      <div class="tekst">
-      <p class="bold">Beskrivelse</p>
-      <p>{single.beskrivelse}</p>
+<article class="singleview">
+  <img src={single.billede} alt="billede" />
+  <div class="textbox_single">
+    <h3>{single.produktnavn}</h3>
+    <div class="textbox2">
+      <p class="bold">Pris</p>
+      <p class="bold">Farver</p>
+      <p>{single.pris}</p>
+      <p>{single.farver}</p>
     </div>
-    <button class="kurv">
-      <h5>Læg i kurv (1)</h5>
-      <img src="" alt="">
-  </button>
-    </div>
+    <p class="bold">Beskrivelse</p>
+    <p>{single.beskrivelse}</p>
+    <button id="add_knap">Tilføj til kurv</button>
+  </div>
+<div id="kurv2" class="hide">
+  <Kurv k_navn={single.produktnavn} k_img={single.billede} k_pris={single.pris} />
+</div>
+</article>
 
-  </article>
 
   <style>
-
     img {
       display: block;
       width: 100%;
       height: auto;
     }
 
-    .bold {
-      font-weight: bold;
-    }
+  .bold {
+    font-weight: bold;
+  }
 
     .singleview {
-      font-size: 18px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin: 5%;
       gap: 5%;
     }
     .textbox2 {
-      white-space: nowrap;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      line-height: 0.01;
-      margin-bottom: 50px;
-      
+    }
+    .textbox_single {
     }
 
-    .tekst {
-      line-height: 1.5;
-    }
-
-.kurv {
-  margin-top: 40px;
-  margin-left: 410px;
-  color: var(--white);
-  background-color: var(--drak_green);
-  border: none;
-  border-radius: 5px;
-  padding: 5px 40px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-
-}
-
-.kurv:hover {
-  color: var(--pink);
-}
-
-
-    @media screen and (max-width: 900px) {
-      .singleview {
-    grid-template-columns: 1fr;
+    .hide{
+    display: none;
   }
-
-  .textbox_single {
-    align-items: flex-start;
-  }
-
-  .textbox2 {
-    margin-bottom: 20px;
-  }
-
-  .row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .row p {
-    margin: 0;
-    padding: 4px 0;
-  }
-
-  .bold {
-    width: 100%;
-  }
-
-
-  img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin-top: 20px;
-      margin-bottom: -40px;
-    }
-
-    .kurv {
-  display: flex; /* Gør knappens container til en fleksibel container */
-  justify-content: flex-start; 
-  align-items: left; 
-  text-align: center; /* Centrerer teksten inden i knappen */
-  padding: 10px 20px; /* Tilpas padding efter behov */
-  white-space: nowrap;
-}
-
-  }
-
-
   </style>
 
+<script>
+  function tilfojKurv() {
+    console.log("Tilføj til kurv");
 
-</html>
+    document.querySelector("#kurv2").classList.remove("hide");
+  }
+
+  function start() {
+    document.querySelector("#add_knap").addEventListener("click", tilfojKurv);
+  }
+
+  document.addEventListener("DOMContentLoaded", start);
+</script>
