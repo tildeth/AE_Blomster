@@ -50,10 +50,12 @@ p {
 
 .extra_t {
   font-family: "yaldevi", sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   color: var(--drak_green);
   line-height: 2;
   margin-top: 20px;
+  text-align: center;
+  
 }
 
 .link {
@@ -61,7 +63,8 @@ p {
 }
 
 .e1 {
-  margin-left: 450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .e2 {
@@ -70,7 +73,9 @@ p {
 }
 
 .e3 {
-  margin-left: 248px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
 }
 
 h4 {
@@ -108,8 +113,7 @@ a {
   }
 
   .e2 {
-    margin-left: 180px;
-    white-space: nowrap;
+    margin-left: 10%;
   }
   .e3 {
     margin-left: 150px;

@@ -2,7 +2,6 @@
 import "../../style/style.css";
 
 import Kurv from "../../components/kurv.astro"
-
 import Header_card from "../../components/header_card.astro";
 import Footer from "../../components/footer.astro";
 import Banner from "../../components/banner.astro";
@@ -39,27 +38,6 @@ const { single } = Astro.props;
 
 ---
 
-<<<<<<< HEAD
-<article class="singleview">
-  <img src={single.billede} alt="billede" />
-  <div class="textbox_single">
-    <h3>{single.produktnavn}</h3>
-    <div class="textbox2">
-      <p class="bold">Pris</p>
-      <p class="bold">Farver</p>
-      <p>{single.pris}</p>
-      <p>{single.farver}</p>
-    </div>
-    <p class="bold">Beskrivelse</p>
-    <p>{single.beskrivelse}</p>
-    <button id="add_knap">Tilføj til kurv</button>
-  </div>
-<div id="kurv2" class="hide">
-  <Kurv k_navn={single.produktnavn} k_img={single.billede} k_pris={single.pris} />
-</div>
-</article>
-
-=======
 <html>
   <head>
     <meta charset="utf-8" />
@@ -74,7 +52,7 @@ const { single } = Astro.props;
 
   <header>
     <Banner />
-    <a href="/#"><TilbageKnap /></a>
+    <a href="/udvalg"><TilbageKnap /></a>
     <UndersideHeader />
   </header>
   
@@ -92,19 +70,16 @@ const { single } = Astro.props;
       <div class="tekst">
       <p class="bold">Beskrivelse</p>
       <p>{single.beskrivelse}</p>
-    </div>
-  </div>
-</article>
-    
       <button class="kurv" id="addToCartButton">
         <h5>Læg i kurv (1)</h5>
       </button>
-
- 
+    </div>
+  </div>
+</article>
 
   <div id="kurvContainer" style="display: none;">
 
-  <Kurv />
+    <Kurv k_navn={single.produktnavn} k_img={single.billede} k_pris={single.pris} />
   <Levering />
   <Footer />
 
@@ -119,12 +94,11 @@ const { single } = Astro.props;
     });
 
 </script>
->>>>>>> ceef2c4dd32eabb6b03c00bca39b8b150fe8b69c
 
   <style>
     img {
       display: block;
-      width: 50%;
+      width: 100%;
       height: auto;
       margin-top: 50px;
     }
@@ -133,7 +107,7 @@ const { single } = Astro.props;
     font-weight: bold;
   }
 
-    .singleview {
+    .product-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin: 5%;
@@ -143,21 +117,17 @@ const { single } = Astro.props;
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-    .textbox_single {
-    }
 
-<<<<<<< HEAD
+
     .hide{
     display: none;
   }
-=======
     .tekst {
       line-height: 1.5;
     }
 
 .kurv {
   margin-top: 40px;
-  margin-left: 410px;
   color: var(--white);
   background-color: var(--drak_green);
   border: none;
@@ -171,13 +141,13 @@ const { single } = Astro.props;
 }
 
 .kurv:hover {
-  color: var(--pink);
+  background-color: rgba(155, 177, 125, 0.9);
 }
 
 
     @media screen and (max-width: 900px) {
 
-      .singleview {
+      .product-container {
     grid-template-columns: 1fr;
   }
 
@@ -224,8 +194,6 @@ const { single } = Astro.props;
 
   }
 
-
->>>>>>> ceef2c4dd32eabb6b03c00bca39b8b150fe8b69c
   </style>
 
 <script>
