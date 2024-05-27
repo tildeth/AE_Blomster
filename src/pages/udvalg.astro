@@ -9,7 +9,6 @@ import ProductCard from "../components/productCard.astro";
 import Tilbage_knap from "../components/tilbage_knap.astro";
 import Kurv from "../components/kurv.astro";
 import UndersideHeader from "../components/undersideHeader.astro";
-import Filter from "../components/filter.astro";
 
 const data = await fetch(
   "https://dmmsxgbleguwsrjxcdfh.supabase.co/rest/v1/ae_blomster",
@@ -44,7 +43,7 @@ const data = await fetch(
   </header>
   <main>
     <Overskift text="Udvalg" />
-<<<<<<< HEAD
+
 <div class="container">
     <div id="filter-buttons" class="demo">
       <p>Filter:</p>
@@ -59,13 +58,7 @@ const data = await fetch(
       </div>
     </div>
     </div>
-=======
 
-<Filter filterLink="/udvalg" filterText="Alle produkter" />
-<Filter filterLink="/subpage" filterText="Blomster og planter" />
-<Filter />
-<Filter />
->>>>>>> filterv3
 
     <section class="udvalg_grid">
       {
