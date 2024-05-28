@@ -38,7 +38,8 @@ import Kurv from "../components/kurv.astro";
       </p>
     </div>
 
-    <section class="grid_1-1">
+    <article >
+      <div class="grid_1_1">
       <Inspi_card
         text="Forårets farvebombe - Blomst navn"
         ipic="../../img/blom2.avif"
@@ -52,12 +53,14 @@ import Kurv from "../components/kurv.astro";
         text="Sødt og stikkende - De bedste kaktusser"
         ipic="../../img/kak1.avif"
       />
+      </div>
       <div class="e2">
         <p class="extra_t">
           Find mere af vores udvalg <a class="link" href="/udvalg"> her</a>
         </p>
       </div>
-    </section>
+    </article>
+    
 
     <Overskift text="Tips" />
 
@@ -65,7 +68,7 @@ import Kurv from "../components/kurv.astro";
       <p class="extra_t">Hold musen over billedet for fun-fact:</p>
     </div>
 
-    <section class="grid_1-1">
+    <article class="grid_1_1">
       <div>
         <Tips
           header="Blomster i isterninger:"
@@ -102,7 +105,7 @@ import Kurv from "../components/kurv.astro";
           fact2="For en blomsterkrans, brug friske blomster som roser, lavendel, tusindfryd, og eukalyptus"
         />
       </div>
-    </section>
+    </article>
   </main>
   <footer>
     <Footer />
@@ -110,7 +113,24 @@ import Kurv from "../components/kurv.astro";
 </body>
 
 <style>
-  .grid_1-1 {
+  .grid_1_1 {
     line-height: 2.1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  justify-content: center;
+  justify-items: center;
   }
+
+  @media screen and (max-width: 900px) {
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: end;
+  }
+ 
+}
+
+
 </style>

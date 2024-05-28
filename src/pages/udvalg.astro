@@ -20,7 +20,6 @@ const data = await fetch(
     },
   }
 ).then((response) => response.json());
-
 ---
 
 <html>
@@ -45,20 +44,16 @@ const data = await fetch(
     <Overskift text="Udvalg" />
 
 <div class="container">
-    <div id="filter-buttons" class="demo">
+    <div id="filter-buttons">
       <p>Filter:</p>
-      <div class="style">
-        {
-          categories.map((category) => (
-            <button type="button" onClick={`filterItems('${category}')`}>
-              {category}
-            </button>
-          ))
-        }
+      <div >
+        <button id="active" class="style">Alle produkter</button>
+        <butoon class="style">Buketter</butoon>
+        <butoon class="style">Planter og Blomster</butoon>
+        <butoon class="style">Vaser</butoon>
       </div>
     </div>
     </div>
-
 
     <section class="udvalg_grid">
       {
@@ -79,25 +74,21 @@ const data = await fetch(
       grid-template-columns: 1fr 1fr 1fr;
     
       gap: 5%;
-      margin: auto;
+      margin: 3%;
     }
 .container{
   margin-right: 55px;
     display: flex;
   justify-content: flex-end;
 }
-  .demo{
+  
 
-    font-size: 16px;
-      line-height: 0.5;
-    }
-
-    .style button {
-    
+    .style {
+  font-family: "yaldevi", sans-serif;
   background-color: var(--drak_green); 
   border: none; 
   color: white; 
-  padding: 10px 8px; 
+  padding: 3% 4%; 
   text-align: center; 
   text-decoration: none; 
   display: inline-block; 
@@ -108,10 +99,14 @@ const data = await fetch(
   transition-duration: 0.4s; 
 }
 
-.style button:hover {
-  color: var(--pink); 
+.style:hover {
+  border-color: var(--green);
+    background-color: rgba(155, 177, 125, 0.9);
 }
 
+#active{
+  background-color: var(--pink);
+}
 
     @media screen and (max-width: 1100px) {
       .udvalg_grid {
@@ -142,11 +137,7 @@ const data = await fetch(
     display: flex;
   justify-content: flex-start;
 }
-  .demo{
 
-    font-size: 16px;
-      line-height: 0.5;
-    }
     }
   </style>
 
