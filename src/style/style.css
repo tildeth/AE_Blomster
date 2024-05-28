@@ -48,6 +48,11 @@ p {
   color: var(--brown);
 }
 
+li{
+  font-family: "yaldevi";
+  color: var(--brown);
+}
+
 .extra_t {
   font-family: "yaldevi", sans-serif;
   font-size: 20px;
