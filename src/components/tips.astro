@@ -12,12 +12,16 @@ const fact2 = Astro.props.fact2;
     <img src={tpic} />
     <div class="overlay">
       <h6>Fun fact</h6>
+      <div class="texttips">
       <p>{fact1}</p>
       <p>{fact2}</p>
+      </div>
     </div>
   </div>
+  <div class="tiptextmain">
   <h4>{header}</h4>
   <p>{text}</p>
+  </div>
 </article>
 
 <style>
@@ -26,6 +30,9 @@ const fact2 = Astro.props.fact2;
     height: 450px;
   }
 
+.tiptextmain{
+  max-width: 450px;
+}
   .t_card {
     display: flex;
     flex-direction: column;
@@ -49,6 +56,9 @@ const fact2 = Astro.props.fact2;
     transition: opacity 0.3s ease;
     z-index: 1;
     font-size: 15px;
+  }
+  .texttips{
+    padding: 2%;
   }
 
   .overlay h6 {
@@ -74,7 +84,9 @@ const fact2 = Astro.props.fact2;
       width: 350px;
       height: 350px;
     }
-
+    .tiptextmain{
+  max-width: 350px;
+}
     p {
       font-size: smaller;
     }
