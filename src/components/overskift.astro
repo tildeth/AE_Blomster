@@ -4,7 +4,7 @@ const { text } = Astro.props;
 
 <div class="header">
   <h2>{text}</h2>
-  <img src="../img/streg.svg" alt="" />
+  <img src="/img/streg.svg" alt="" />
 </div>
 
 <style>
@@ -24,7 +24,7 @@ font-size: 30px;
     max-width: 90%; /* Automatisk bredde */
     height: 30px; /* Fast højde, juster som nødvendigt */
     flex-grow: 1; /* Tillad billedet at fylde den resterende bredde */
-     object-fit: cover; /* Sikrer at billedet bevarer sit forhold */ */
+     object-fit: cover; /* Sikrer at billedet bevarer sit forhold */ 
   }
 
   @media screen and (max-width: 700px) {

@@ -11,7 +11,7 @@ import Kurv from "../components/kurv.astro";
 import UndersideHeader from "../components/undersideHeader.astro";
 
 const data = await fetch(
-  "https://dmmsxgbleguwsrjxcdfh.supabase.co/rest/v1/ae_blomster",
+  "https://dmmsxgbleguwsrjxcdfh.supabase.co/rest/v1/ae_blomster?limit=12",
   {
     method: "GET",
     headers: {
@@ -33,57 +33,51 @@ const data = await fetch(
     <meta name="generator" content={Astro.generator} />
     <title>Udvalg</title>
   </head>
-  <header>
-    <Banner />
-    <div class="grid_1-1">
-      <a href="/#"><Tilbage_knap /></a>
-      <UndersideHeader />
-    </div>
-  </header>
-  <main>
-    <Overskift text="Udvalg" />
-
-<div class="container">
-    <div id="filter-buttons">
-      <p>Filter:</p>
-      <div >
-        <button id="active" class="style">Alle produkter</button>
-        <butoon class="style">Buketter</butoon>
-        <butoon class="style">Planter og Blomster</butoon>
-        <butoon class="style">Vaser</butoon>
+  <body>
+    <header>
+      <Banner />
+      <div class="grid_1-1">
+        <a href="/#"><Tilbage_knap /></a>
+        <UndersideHeader />
       </div>
-    </div>
-    </div>
+    </header>
+    <main>
+      <Overskift text="Udvalg" />
 
-    <section class="udvalg_grid">
-      {
-        data.map((blomst) => (
-          <ProductCard
-            data={blomst}
-            loading="lazy"
-          />
-        ))
-      }
-    </section>
-  </main>
-  <footer><Footer /></footer>
+      <div class="container">
+        <div id="filter-buttons">
+          <p>Filter:</p>
+          <div>
+            <button id="active" class="style">Alle produkter</button>
+            <butoon class="style">Buketter</butoon>
+            <butoon class="style">Planter og Blomster</butoon>
+            <butoon class="style">Vaser</butoon>
+          </div>
+        </div>
+      </div>
+
+      <section class="udvalg_grid">
+        {data.map((blomst) => <ProductCard data={blomst} loading="lazy" />)}
+      </section>
+    </main>
+    <footer class="footer"><Footer /></footer>
+  </body>
   <style>
-
     .udvalg_grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-    
+
       gap: 5%;
       margin: 3%;
     }
-.container{
-  margin-right: 55px;
-    display: flex;
-  justify-content: flex-end;
-}
-  
+    .container {
+      margin-right: 55px;
+      display: flex;
+      justify-content: flex-end;
+    }
 
     .style {
+
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--drak_green); 
   border: none; 
@@ -99,14 +93,14 @@ const data = await fetch(
   transition-duration: 0.4s; 
 }
 
-.style:hover {
-  border-color: var(--green);
-    background-color: rgba(155, 177, 125, 0.9);
-}
+    .style:hover {
+      border-color: var(--green);
+      background-color: rgba(155, 177, 125, 0.9);
+    }
 
-#active{
-  background-color: var(--pink);
-}
+    #active {
+      background-color: var(--pink);
+    }
 
     @media screen and (max-width: 1100px) {
       .udvalg_grid {
@@ -132,14 +126,11 @@ const data = await fetch(
         display: block;
         padding: 10px;
       }
-      .container{
-  margin-left: 60px;
-    display: flex;
-  justify-content: flex-start;
-}
-
+      .container {
+        margin-left: 60px;
+        display: flex;
+        justify-content: flex-start;
+      }
     }
   </style>
-
-
 </html>

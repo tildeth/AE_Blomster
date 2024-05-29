@@ -7,6 +7,10 @@
   --drak_green: #486d0f;
 }
 
+.footer{
+  margin-top: 320px;
+}
+
 @font-face {
   font-family: "hwt-arabesque", sans-serif;
   font-weight: 400;
@@ -16,7 +20,7 @@
 
 @font-face {
   font-family: "yaldevi";
-  src: url("../font/yaldevi.woff2");
+  src: url("/font/yaldevi.woff2");
 }
 
 body {
@@ -61,6 +65,7 @@ font-size: 20px;
   text-align: center;
   
 }
+
 
 .link {
   color: var(--pink);
