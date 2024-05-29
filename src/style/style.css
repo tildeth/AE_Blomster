@@ -48,21 +48,20 @@ h3 {
 }
 
 p {
-  font-family: "yaldevi", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: var(--brown);
 }
 
 li{
-  font-family: "yaldevi";
+  font-family: "yaldevi", sans-serif;
   color: var(--brown);
 }
 
 .extra_t {
-  font-family: "yaldevi", sans-serif;
-  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 20px;
   color: var(--drak_green);
-  line-height: 2;
-  margin-top: 20px;
+  line-height: 2.5;
   text-align: center;
   
 }
@@ -89,23 +88,19 @@ li{
 }
 
 h4 {
-  font-family: "yaldevi", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: var(--brown);
   font-size: 20px;
   font-weight: bold;
   margin-bottom: -5px;
-}
-
-p {
-  font-family: "yaldevi", sans-serif;
-  color: var(--brown);
+  white-space: nowrap;
 }
 
 .o1 {
   margin-right: 150px;
 }
 text {
-  max-width: 45ch;
+  max-width: 65ch;
 }
 
 a {
