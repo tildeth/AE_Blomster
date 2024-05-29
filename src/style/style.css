@@ -7,6 +7,10 @@
   --drak_green: #486d0f;
 }
 
+.footer{
+  margin-top: 320px;
+}
+
 @font-face {
   font-family: "hwt-arabesque", sans-serif;
   font-weight: 400;
@@ -16,7 +20,7 @@
 
 @font-face {
   font-family: "yaldevi";
-  src: url("../font/yaldevi.woff2");
+  src: url("/font/yaldevi.woff2");
 }
 
 body {
@@ -31,7 +35,7 @@ h1 {
 h2 {
   font-family: "hwt-arabesque";
   color: var(--pink);
-  font-size: xx-large;
+  font-size: 40px;
   margin-left: 20px;
   white-space: nowrap;
 }
@@ -48,30 +52,40 @@ p {
   color: var(--brown);
 }
 
+li{
+  font-family: "yaldevi";
+  color: var(--brown);
+}
+
 .extra_t {
   font-family: "yaldevi", sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   color: var(--drak_green);
   line-height: 2;
   margin-top: 20px;
-
+  text-align: center;
+  
 }
+
 
 .link {
   color: var(--pink);
 }
 
 .e1 {
-  margin-left: 450px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .e2 {
+  margin-left: 295px;
   grid-column: 2/3;
 }
 
 .e3 {
-  margin-left: 215px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
 }
 
 h4 {
@@ -85,7 +99,6 @@ h4 {
 p {
   font-family: "yaldevi", sans-serif;
   color: var(--brown);
-  max-width: 50ch;
 }
 
 .o1 {
@@ -95,18 +108,27 @@ text {
   max-width: 45ch;
 }
 
+a {
+  text-decoration: none;
+}
 
 @media screen and (max-width: 700px) {
+  .e1 {
+    margin-left: 20px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+  }
 
-  .e1{
-      margin-left: 20px;
-      padding-bottom: 15px;
-    }
-    .e3{
-      margin-left: 150px;
-      
-      }
-    .o1{
-      margin-right: 0px;
-    }
+  .e2 {
+    margin-left: 10%;
+  }
+  .e3 {
+    margin-left: 150px;
+  }
+  .o1 {
+    margin-right: 0px;
+  }
 }

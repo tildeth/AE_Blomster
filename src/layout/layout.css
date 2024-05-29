@@ -13,10 +13,7 @@ grid_1-1-1 {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-section {
-  margin: 10%;
-  padding: 5%;
-}
+
 
 /*  Media q!!!!!! */
 
