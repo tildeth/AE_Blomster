@@ -24,7 +24,7 @@ import UndersideHeader from "../components/undersideHeader.astro";
 <body>
   <header>
     <Banner />
-    <div class="grid_1-1">
+    <div class="flex">
       <a href="/#"><Tilbage_knap /></a>
       <UndersideHeader />
     </div>
@@ -86,6 +86,11 @@ import UndersideHeader from "../components/undersideHeader.astro";
 </body>
 
 <style>
+    .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .first {
     display: grid;
     grid-template-columns: 1fr 1fr;
